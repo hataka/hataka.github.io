@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+		"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="layout.css">
+ <title>BubbleChartExample</title>
+ <style type="text/css" media="all">
+	.note {color:red;}
+ </style>
+ <script src="http://kahata.travel.coocan.jp/FrameWork/scripts/jquery-latest.js"></script>
+ <script type="text/javascript" src="http://kahata.travel.coocan.jp/FrameWork/scripts/common_lib.js"></script>
+ <script type="text/javascript" src="http://kahata.travel.coocan.jp/FrameWork/dirlister/scripts/menubar.js"></script>
+ <script type="text/javascript" src="http://kahata.travel.coocan.jp/FrameWork/scripts/ui.tabs/ui.core.js"></script>
+ <script type="text/javascript" src="http://kahata.travel.coocan.jp/FrameWork/scripts/ui.tabs-1.2.3/ui.tabs.js"></script>  <!-- 変更 -->
+ <link href="http://kahata.travel.coocan.jp/FrameWork/scripts/ui.tabs/ui.tabs.css" rel="stylesheet" type="text/css" />  
+ <link href="http://kahata.travel.coocan.jp/FrameWork/scripts/layout.css" rel="stylesheet" type="text/css" />  
+ <script type="text/javascript">
+	$(document).ready(function (){
+		$('#tabC > ul').tabs();   // Slide effect
+		//$('#tabC > ul').tabs({event: 'mouseover'});  // Custom event	 
+		$('.ui-tabs-nav').bind('tabsselect', function(event, ui) {
+				// Objects available in the function context:
+				//ui.options // options used to intialize this widget
+				//alert(ui.tab.id); //ui.tab OK // anchor element of the selected (clicked) tab
+				//alert(ui.tab.innerText); //笳� ui.tab OK // anchor element of the selected (clicked) tab
+				//ui.panel   // element, that contains the selected/clicked tab contents
+				//alert(ui.panel.id); // OK
+				//ui.index   // zero-based index of the selected (clicked) tab
+					//alert(ui.index); // undefined
+				var baseurl = dirname(window.location.href).replace('jquery_ui.tab.php?dir=','') + '\/';
+				if(fileext(ui.tab.innerText) == 'html') {
+					var fileurl = baseurl + ui.tab.innerText;
+				}	else {
+					var fileurl = baseurl + ui.tab.innerText + '\/main.cs';
+				}
+				$('#fileurl').html(fileurl);
+			});
+	});
+</script>
+ <base  target="MainPanel" />
+</head>
+<body style="margin:0;">
+<div id="tabC" style="margin:0px;">
+  <ul>   
+	  <li><a href="#tabC1"><span>tabC1</span></a></li>
+    <li><a href="#tabC2"><span>tabC2</span></a></li>
+    <li><a href="#tabC3"><span>tabC3</span></a></li>
+    <li><a href="#tabC4"><span>tabC4</span></a></li>
+  </ul>   
+	<div id="tabC1" style="margin:0;">
+		<center><iframe src="BubbleChartExample.swf" width="800px" height="600px" frameborder="0" ></iframe></center>
+	</div>
+	<div id="tabC2" style="margin:0;">
+		<iframe src="http://kahata.travel.coocan.jp/FrameWork/Dirlister/SimpleViewer.class.php?path=https://raw.githubusercontent.com/apache/flex-utilities/master/TourDeFlex/TourDeFlex3/src/mx/charts/BubbleChartExample.mxml&main=true" width="100%" framborder="0" height="1200px"></iframe>
+	</div>
+	<div id="tabC3" style="margin:0;">
+		TabC3
+	</div>
+	<div id="tabC4" style="margin:0;">
+		<h2>Memo</h2>
+		<h2>Links</h2>
+			<ol>
+				<li><span><a href="http://flex.apache.org/tourdeflex/" target="_blank">Apache Flex® Tour De Flex Component Explorer</a></span></:i>
+			</ol>
+	</div>
+</div>
+	<hr>
+  <b>fileurl:  </b>
+  <span id="fileurl"></span>
+  <div style="text-align:right; margin-right:1em;">
+	<SCRIPT language="JavaScript"><!---
+		document.write("Last update: ",document.lastModified)
+		parent.TargetFilePath = parent.EditFilePath = document.getElementById("fileurl").innerHTML; 
+	//--></SCRIPT>
+  </div>
+  <p align="center"></p>
+</body>
+</html>
