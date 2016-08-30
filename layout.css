@@ -1,0 +1,48 @@
+
+body   
+{
+    color: #000000;
+}
+
+ h1	{text-align:center ; color:#0000ff }
+ h2 { color:#ff0000 ; margin-top:0px; margin-bottom:0px; }
+ h3 { color:#008800 ; margin-top:0px; margin-bottom:0px; }
+
+strong {
+	font-weight:bolder;
+	color:#FF0000;
+ }
+
+ .prg	{
+	border:solid;
+	border-color:#000000;
+	border-width:1px;
+	background-color:#aaffaa;
+	padding:10px;
+ }
+
+ a:link		{color:#0000FF}
+ a:visited	{color:#AA00AA}
+ a:hover	{color:#FF0000}
+.com {
+	padding:0.8em;
+	background: #eee;
+	color: black;
+	border: 1px solid gray;
+	margin-left:0em;
+	margin-right:0em;
+}
+/**** toolbar ******/
+.toolbutton
+{
+	width:24px;
+	height:24px;
+  border:0px; 
+}
+
+.toolbutton_highlight
+{
+	width:24px;
+	height:24px;
+  background-color:#fff;
+}
