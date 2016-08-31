@@ -98,7 +98,7 @@ header h2 {
 #contents aside {
 	float: right;/*サイドバーを左に配置したい場合はrightを指定*/
 	width: 17%; /*240px;*/
-	overflow: auto /*scroll;*/ /*hidden;*/
+	overflow: auto; /*scroll;*/ /*hidden;*/
 	background: #fff; /* #ccc;*/
 }
 #contents aside p {
