@@ -1,4 +1,3 @@
-
 body   
 {
     color: #000000;
@@ -46,3 +45,72 @@ strong {
 	height:24px;
   background-color:#fff;
 }
+
+header {
+	min-width: 1060px;
+	overflow: hidden;
+	border-bottom: 2px solid #9fb7d4;
+}
+
+header h1 {
+	width: 1060px;
+	margin: 0 auto;
+	padding: 10px 10px 10px 10px;
+}
+header h2 {
+	width: 1060px;
+	margin: 0 auto;
+	padding: 0 10px 10px 10px;
+}
+
+#contents {
+	overflow: hidden;
+	width: 100%;/*1060px;*/
+	margin: 0 auto;
+}
+#contents nav {
+	width: 100%;/*1060px*/;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #ddd;
+}
+#contents nav ul {
+	padding: 0 0 0 0;
+	margin: 0 0 0 10px;
+	list-style: none;
+	overflow: hidden;
+}
+#contents nav ul li {
+	float: left;
+	margin: 4px 0 6px 10px;
+}
+
+#contents #main {
+	float: right;/*サイドバーを左に配置したい場合はrightを指定*/
+	width: 83%; /*760px;*/
+	overflow: hidden;
+	background: #FFFFFF;/* #9fb7d4;*/
+}
+	#contents #main article {
+		overflow: hidden;
+		padding: 10px;
+	}
+#contents aside {
+	float: right;/*サイドバーを左に配置したい場合はrightを指定*/
+	width: 17%; /*240px;*/
+	overflow: scroll; /*hidden;*/
+	background: #fff; /* #ccc;*/
+}
+#contents aside p {
+		/*padding: 10px;*/
+	}
+footer {
+	min-width: 1060px;
+	overflow: hidden;
+	border-top: 2px solid #9fb7d4;
+}
+	footer #copyright {
+		width: 1060px;
+		margin: 0 auto;
+		padding: 10px;
+	}

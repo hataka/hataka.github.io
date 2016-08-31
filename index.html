@@ -12,10 +12,24 @@
   <link href="http://kahata.travel.coocan.jp/FrameWork/scripts/ui.tabs/ui.tabs.css" rel="stylesheet" type="text/css" />  
  </head>
 <body>
-
+<header>
 <h1> Hataka の GitHub ホームページへようこそ！</h1>
-<hr size="1" noshade="noshade">
+</header>
+<div id="contents">
+<nav>
+<ul>
+<li><span><a href="https://www.google.co.jp/" target="_blank">Google</a></span></li>
+<li>menu</li>
+<li>menu</li>
+<li>menu</li>
+</ul>
+
+</nav>
+<div id="main">
+<article>
+<section>
 <h2>Memo</h2>
+<hr>
 <h5>クリックジャッキングとは</h5>
 悪意のあるサイト上の特定箇所をクリックさせ、別サイトの設定情報を変更させる」攻撃手法の事です。
 攻撃者は、悪意のあるサイトにiframeで別サイトを埋め込み、それを視覚的に見えないよう工夫することで、ユーザーが気づかないうちに、
@@ -35,7 +49,8 @@ SAMEORIGIN：フレーム内のページ表示を同一ドメイン内のみ許�
 ALLOW-FROM uri：フレーム内のページ表示を指定されたドメインに限り許可
 があり、用途に応じて設定が可能です。
 
-<hr>
+</section>
+<section>
 <h2>Links</h2>
 <hr>
 <h3>Hataka's Site</h3>
@@ -60,16 +75,41 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
  <li><span><a href="" target="_blank"></a></span></li>
 -->
 </ul>
+</section>
+<section>
 <h2>ToDo</h2>
 <hr>
 <center>
 <audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-cute.mp3" controls />
 <!--  chrome NG 
 <iframe src="https://azu.github.io/github-issue-widget/?owner=efcl&repo=efcl.github.io&limit=10&state=closed"
+<iframe src="http://wisdom.sakura.ne.jp/index.html" width="640" height="480" style="display:block; margin: 0 auto;">&nbsp;</iframe>
         allowtransparency="true" frameborder="0" scrolling="0" width="100%">&nbsp;</iframe>
 -->
-<iframe src="http://wisdom.sakura.ne.jp/index.html" width="640" height="480" style="display:block; margin: 0 auto;">&nbsp;</iframe>
-
-
 </center>
+</section>
+</article>
+<!--main--></div>
+<aside>
+<h1>Menu</h1>
+<p style="white-space: nowrap;">ここはサイドバーです。</p>
+<h2>Page</h2>
+<h3 onClick="$(this).next().toggle()">Hataka's Site</h3>
+<table border="0"><tr><td>
+<ul>
+ <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
+ <li><span><a href="https://hataka.github.io/BubbleChartExample/BubbleChartExample.swf" target="_blank">BubbleChartExample.swf</a></span></li>
+ <li><span><a href="https://github.com/hataka/hataka.github.io/" target="_blank">hataka.github.io</a></span></li>
+</ul>
+</td></tr></table>
+
+<h2>GitHub</h2>
+
+<h2>Web</h2>
+</aside>
+<!--contents--></div>
+<footer>
+<div id="copyright">&copy;WEB DESIGN LAB</div>
+</footer>
+<!--wrapper--></div>
 </html>
