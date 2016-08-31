@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="layout.css" type="text/css">
   <script src="scripts/jquery-1.4.2.js"></script>
  <script>
-function hyoji(){
-  if (document.getElementById("disp").style.display=="block") {
-    document.getElementById("disp").style.display="none";
+function hyoji(disp){
+  if (document.getElementById(disp).style.display=="block") {
+    document.getElementById(disp).style.display="none";
   } else {
-    document.getElementById("disp").style.display="block";
+    document.getElementById(disp).style.display="block";
   }
 }
 
@@ -100,8 +100,8 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 <h1>Menu</h1>
 <p style="white-space: nowrap;">ここはサイドバーです。</p>
 <h2>Page</h2>
-<h3 onClick="hyoji();">Hataka's Site</h3>
-<table id="disp" border="0"><tr><td>
+<h3 onClick="hyoji('disp1');">Hataka's Site</h3>
+<table id="disp1" border="0"><tr><td>
 <ul>
  <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
  <li><span><a href="https://hataka.github.io/BubbleChartExample/BubbleChartExample.swf" target="_blank">BubbleChartExample.swf</a></span></li>
@@ -110,8 +110,15 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 </td></tr></table>
 
 <h2>GitHub</h2>
+<h3 onClick="hyoji('disp2');">Repository</h3>
+<table id="disp2" border="0"><tr><td>
+</td></tr></table>
 
 <h2>Web</h2>
+<h3 onClick="hyoji('disp3');">Search Engin</h3>
+<table id="disp3" border="0"><tr><td>
+</td></tr></table>
+
 </aside>
 <!--contents--></div>
 <footer>
