@@ -8,11 +8,14 @@
  <script>
 	$(document).ready(function (){
       //$('#tabC > ul').tabs();   // Slide effect
-
-		$("#article").load("menu.html");
+		//OK 
+		//$("#article").load("menu.html");
+		/*
+		 NO
 		$.get("http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", function(data){
   		alert("Data Loaded: " + data);
 		});
+		*/
 		/*
 		$("#switch_target").toggle(
 			function(){
@@ -27,23 +30,29 @@
 		*/
 	});
 
+	function hyoji(disp){
+  	if (document.getElementById(disp).style.display=="block") {
+    	document.getElementById(disp).style.display="none";
+  	} else {
+    	document.getElementById(disp).style.display="block";
+  	}
+	}
 
-function hyoji(disp){
-  if (document.getElementById(disp).style.display=="block") {
-    document.getElementById(disp).style.display="none";
-  } else {
-    document.getElementById(disp).style.display="block";
-  }
-}
-function toggle_sidebar(){
-  if (document.getElementById("sidebar").style.width=="0%") {
-    document.getElementById("sidebar").style.width="17%";
-    document.getElementById("main").style.width="83%";
-  } else {
-    document.getElementById("sidebar").style.width="0%";
-    document.getElementById("main").style.width="100%";
-  }
-}
+	function toggle_sidebar(){
+  	if (document.getElementById("sidebar").style.width=="0%") {
+    	document.getElementById("sidebar").style.width="17%";
+    	document.getElementById("main").style.width="83%";
+  	} else {
+    	document.getElementById("sidebar").style.width="0%";
+    	document.getElementById("main").style.width="100%";
+  	}
+	}
+
+	function loadPage(site){
+		$("#article").load("menu.html");
+	}
+
+
 </script>
  
  </head>
@@ -137,11 +146,8 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 <h1>Menu</h1>
 <p style="white-space: nowrap;">ここはサイドバーです。</p>
 <h2>Page</h2>
-<!--
-<h3 onClick="hyoji('disp1');">Hataka's Site</h3>
--->
+<!-- <h3 onClick="hyoji('disp1');">Hataka's Site</h3> -->
 <h3 onClick="$(this).next().toggle()">Hataka's Site</h3>
-
 <table id="disp1" border="0"><tr><td>
 <ul>
  <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
@@ -151,12 +157,18 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 </td></tr></table>
 
 <h2>GitHub</h2>
-<h3 onClick="hyoji('disp2');">Repository</h3>
+<!-- <h3 onClick="hyoji('disp2');">Repository</h3>-->
+<h3 onClick="$(this).next().toggle()">Repository</h3>
 <table id="disp2" border="0"><tr><td>
+	<ul>
+		<li><span><a href="#" onClick="loadPage('menu.html');return fakse;">Menu.html</a></span></li>
+		<li><span><a href="#" onClick="loadPage('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php');return fakse;">sslib255.php</a></span></li>
+	</ul>
 </td></tr></table>
 
 <h2>Web</h2>
-<h3 onClick="hyoji('disp3');">Search Engin</h3>
+<!--<h3 onClick="hyoji('disp3');">Search Engin</h3>-->
+<h3 onClick="$(this).next().toggle()">Search Engin</h3>
 <table id="disp3" border="0"><tr><td>
 </td></tr></table>
 
