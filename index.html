@@ -6,6 +6,28 @@
   <link rel="stylesheet" href="layout.css" type="text/css">
   <script src="scripts/jquery-latest.js"></script>
  <script>
+	$(document).ready(function (){
+      //$('#tabC > ul').tabs();   // Slide effect
+
+		$("#article").load("menu.html");
+		$.get("http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", function(data){
+  		alert("Data Loaded: " + data);
+		});
+		/*
+		$("#switch_target").toggle(
+			function(){
+				$("form").attr('target','_blank');
+				$("#target_name").html("_blank");
+			},
+			function(){
+				$("form").attr('target','MainPanel');
+				$("#target_name").html("MainPanel");
+			}
+		);
+		*/
+	});
+
+
 function hyoji(disp){
   if (document.getElementById(disp).style.display=="block") {
     document.getElementById(disp).style.display="none";
@@ -13,7 +35,15 @@ function hyoji(disp){
     document.getElementById(disp).style.display="block";
   }
 }
-
+function toggle_sidebar(){
+  if (document.getElementById("sidebar").style.width=="0%") {
+    document.getElementById("sidebar").style.width="17%";
+    document.getElementById("main").style.width="83%";
+  } else {
+    document.getElementById("sidebar").style.width="0%";
+    document.getElementById("main").style.width="100%";
+  }
+}
 </script>
  
  </head>
@@ -24,8 +54,14 @@ function hyoji(disp){
 <div id="contents">
 <nav>
 <ul>
-<li><span><a href="https://www.google.co.jp/" target="_blank">Google</a></span></li>
-<li>menu</li>
+<li><span><a href="https://hataka.github.io/index.html" target="_self"><font color="#008800"><b>Home</b></font></a></span></li>
+<li><font color="#AAAAAA">|</font></li>
+<li><span><a href="https://github.com/hataka" target="_blank">Top</a></span></li>
+<li><span><a href="https://github.com/hataka/hataka.github.io" target="_blank">github.io</a></span></li>
+<li><span><a href="https://github.com/hataka/hataka.github.io/wiki" target="_blank">wiki</a></span></li>
+<li><font color="#AAAAAA">|</font></li>
+<li><span><a href="#" onClick="toggle_sidebar();return fakse;">SideBar表示</a></span></li>
+
 <li>menu</li>
 <li>menu</li>
 </ul>
@@ -33,7 +69,7 @@ function hyoji(disp){
 </nav>
 <div id="main">
 <center><h3>Top Page</h3></center>
-<article>
+<article id="article">
 <section>
 <h2>Memo</h2>
 <hr>
@@ -97,7 +133,7 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 </section>
 </article>
 <!--main--></div>
-<aside>
+<aside id="sidebar">
 <h1>Menu</h1>
 <p style="white-space: nowrap;">ここはサイドバーです。</p>
 <h2>Page</h2>
