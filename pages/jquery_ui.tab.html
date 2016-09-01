@@ -43,6 +43,29 @@
 	function iframe_autoheight(target, url){
 		$(target).html("<iframe id='Z' name='newZ' onload='GetHeight(this.id,this.name)' frameborder='no' style='border: 0px gray dotted;' width=100% src ='" + url + "'></iframe>");
 	}
+
+	function hyoji(disp){
+  	if (document.getElementById(disp).style.display=="block") {
+    	document.getElementById(disp).style.display="none";
+  	} else {
+    	document.getElementById(disp).style.display="block";
+  	}
+	}
+
+	function toggle_sidebar(){
+  	if (document.getElementById("sidebar").style.width=="0%") {
+    	document.getElementById("sidebar").style.width="17%";
+    	document.getElementById("main").style.width="83%";
+  	} else {
+    	document.getElementById("sidebar").style.width="0%";
+    	document.getElementById("main").style.width="100%";
+  	}
+	}
+
+	function loadPage(dest,site){
+		$(dest).load(site);
+	}
+
 </script>
 </head>
 <body style="margin:0;">
