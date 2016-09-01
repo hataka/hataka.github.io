@@ -1,0 +1,120 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://p.sohei.org/stuff/jquery/clickmenu/demo/jquery.clickmenu.js"></script>
+  <script type="text/javascript" src="http://dev.jquery.com/view/tags/ui/latest/ui/ui.core.js"></script>
+  <script type="text/javascript" src="http://dev.jquery.com/view/tags/ui/latest/ui/ui.tabs.js"></script>
+  <link rel="stylesheet" type="text/css" href="clickmenu.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+ <link href="ui.tabs.css" rel="stylesheet" type="text/css" />  
+  <title>BottomPanel</title>
+<script type="text/javascript"><!--
+$(document).ready(function()
+{
+	$.fn.clickMenu.setDefaults({arrowSrc:'arrow_right.gif'});
+	$('#mainmenu').clickMenu();
+});
+//--></script>
+</head>
+<body>
+<br>
+<br>
+<!--
+<div id="divone">
+-->
+<ul id="mainmenu">
+<li>File
+	<ul><li>New&nbsp;window</li>
+		<li class="sep"></li>
+		<li>New...</li>
+		<li>Open...</li>
+		<li>Save...</li>
+		<li>Print...</li>
+		<li class="sep"></li>
+		<li><span onClick="window.close();return false;">Exit</span></li>
+	</ul>
+</li>
+<li>Edit
+	<ul><li>Undo</li>
+		<li>Redo</li>
+		<li class="sep"></li>
+		<li>Cut</li>
+		<li>Copy</li>
+		<li>Paste
+			<ul><li>All</li>
+				<li>Something</li>
+			</ul>
+		</li>
+		<li>Delete</li>
+	</ul>
+</li>
+<li>Bookmarks
+	<ul><li>Bookmark&nbsp;manager</li>
+		<li class="sep"></li>
+		<li><a href="http://hata2/wiki">wiki</a></li>
+		<li>some&nbsp;bookmark</li>
+		<li>another&nbsp;bookmark</li>
+		<li><span onClick="load_file('test1.html');return false" href="#">test1.html</span></li>
+		<li onclick="window.open(this.href,this.target, 'width=640,height=480,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false" href="http://kahata.tea-nifty.com/kahata/images/P5040103.JPG" target="_blank">P5040103.JPG</li>
+		<li onclick="window.open(this.href,this.target); return false" href="http://kahata.tea-nifty.com/kahata/images/P5040103.JPG" target="_blank">P5040103.JPG</li>
+		<li class="sep"></li>
+		<li>Imported&nbsp;bookmarks
+			<ul>
+		<li onClick="location.href='http://hata2/wiki2';return false;">wiki2</li>
+		<li onClick="location.href='http://hata2/wiki';return false;">wiki</li>
+		<li onclick="window.open(this.href, this.target); return false" href="http://hata2/wiki2" target="_blank">test</li>
+		<li onclick="window.open(this.href, this.target); return false" href="http://hata2/wiki" target="_self">test</li>
+
+				<li>bookmark&nbsp;one</li>
+				<li>bookmark&nbsp;two</li>
+				<li>bookmark&nbsp;three</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<li>Help
+	<ul><li>Help&nbsp;index</li>
+		<li class="sep"></li>
+		<li>About...</li>
+	</ul>
+</li>
+</ul>
+<!--
+</div>
+-->
+
+<div id="tabC">
+  <ul>   
+    <li><a href="#tabC1"><span>description</span></a></li>
+    <li><a href="#tabC2" onclick="spreadsheet();return false;" ><span>Spread&nbsp;Sheet</span></a></li>
+    <li><a href="#tabC3"  onclick="Test2();return false;"><span>wsc&nbsp;test</span></a></li>
+    <li><a href="#tabC4" onclick="pukiwiki();return false;"><span>wiki</span></a></li>
+  </ul>   
+  <div id="tabC1">   
+		<h1>MenuBar</h1>
+		ここにカスタムメニュー(ボタン,リンク)を追加できます。
+    content... aaa     
+  </div>   
+  <div id="tabC2">
+   content...bbb
+  </div>   
+
+  <div id="tabC3">   
+<!--    content...ccc -->
+  </div>
+
+  <div id="tabC4">   
+  </div>   
+
+<center>
+<hr />
+<div style="text-align:right; margin-right:1em;">
+  <SCRIPT language="JavaScript"><!---
+    document.write("Last update: ",document.lastModified)
+  //--></SCRIPT>
+</div>
+<p align="center">
+</p>
+</body>
+</html>

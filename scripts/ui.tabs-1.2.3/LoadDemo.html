@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- ======================================================================
+  download from : http://jsajax.com/Articles/jQueryUITabs/930
+  links: http://docs.jquery.com/UI/API/1.6/Tabs (1.6 old version !!)
+======================================================================== -->
+<head>
+  <title>jQuery UI Tabs</title>
+  <link href="ui.tabs.css" rel="stylesheet" type="text/css" />
+  <script src="jquery-1.2.3.js" type="text/javascript"></script>
+  <script src="ui.tabs.pack.js" type="text/javascript"></script>
+	<script src="/FrameWork/scripts/common_lib.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#tabs > ul').tabs();  // Simple tabs     
+      // $('#tabs > ul').tabs({selected:1});  // Start with custom tab
+      // $('#tabs > ul').tabs({fx: { height: 'toggle' }});   // Slide effect 
+      // $('#tabs > ul').tabs({fx: { opacity: 'toggle' }});  // Fade  effect 
+      // $('#tabs > ul').tabs({ fx: { height: 'toggle', opacity: 'toggle' }});  // Slide and Fade effect combined
+      // $('#tabs > ul').tabs({event: 'mouseover'});  // Custom event     
+      // $('#tabs > ul').tabs({event: 'click'});  // Custom event     
+
+			$('.ui-tabs-nav').bind('tabsselect', function(event, ui) {
+			//$('.ui-tabs-nav').bind('tabsshow', function(event, ui) {
+					var selectedTab = ui.tab.href.replace(window.location.href+'#','');
+					// tabsshow Ç≈OK
+					//alert("The tab at index " + $('#tabs > ul').tabs().data("selected.tabs") + " was selected"); //OK
+    			// Objects available in the function context:
+    			//ui.options // options used to intialize this widget
+    			// http://hata2/JavaScript/ui.tab_1.2.3/LoadDemo.html#tab1
+    			//alert(selectedTab); //ui.tab OK // anchor element of the selected (clicked) tab
+    			//alert(ui.tab.id); //ui.tab OK // anchor element of the selected (clicked) tab
+    			//alert(ui.tab.innerText); //Åù ui.tab OK // anchor element of the selected (clicked) tab
+    			//ui.panel   // element, that contains the selected/clicked tab contents
+    			//alert(ui.panel.id); // OK
+    			//ui.index   // zero-based index of the selected (clicked) tab
+					//alert(ui.index); // undefined
+
+					$('#fileurl').html(filedir(window.location.href) + ui.tab.innerText);
+			});
+    });
+  </script>
+</head>
+<body>
+
+  <h2>Simple Tabs</h2>
+  <div id="tabs">
+      <ul>
+          <li><a id="tab11" href="#tab1"><span>tab1 test</span></a></li>
+          <li><a id="tab22" href="#tab2"><span>tab2 test</span></a></li>
+          <li><a id="tab33" href="#tab3"><span>tab3 test</span></a></li>
+      </ul>
+      <div id="tab1">
+          <p>jQuery UI Tabs (Simple Tabs)</p>
+          <pre><code>$('#tabs > ul').tabs();</code></pre>       
+      </div>
+      <div id="tab2">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+      <div id="tab3">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </div>
+  </div>
+<b>fileurl:  </b><span id="fileurl"></span>
+
+</body>
+</html>

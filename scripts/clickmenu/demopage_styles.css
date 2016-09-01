@@ -1,0 +1,133 @@
+/* demopage styles */
+body
+{
+	margin: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#divone
+{
+	position: fixed;
+	top: 0;
+	border: 0;
+	border-bottom: 1px solid gray;
+	padding: 0 0 0 5px;
+	width: 100%;
+	z-index: 10;
+	background-color: #eee;
+}
+#divone div.cmDiv
+{
+	border: 0;
+}
+#divone li.main.hover
+{
+	background-color: #dedede;
+}
+#divone li.main li.hover
+{
+	background-color: #4a93e3;
+}
+hr
+{
+	height: 1px;
+	margin: 4px 2px;
+	border-color: #bbb;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	padding:0;
+}
+#helper
+{
+	margin-top: 40px;
+	//margin-top: 20px; /* for ie */
+}
+li.sep
+{
+	border-top: 1px solid gray;
+	margin: 2px 0;
+	height: 0px;
+	//fmargin-bottom: 0px; /* ie */
+	//font-size: 0; /* ie */
+	//float: left; /* ie */
+	//width: 100%; /* ie */
+}
+li li
+{
+	//clear: left;
+}
+#centerDiv
+{
+	width: 200px; 
+	position: absolute;
+	top: 200px;
+	left: 550px;
+}
+#centerDiv li.main
+{
+	background: white;
+	width: 178px;
+	//width: 198px;/*ie*/
+	text-align: center;
+}
+#centerdiv li.main.hover
+{
+	background: #d3e3f6;
+}
+#centerDiv li.main ul
+{
+	background: #ebf5ff;
+}
+#centerDiv li.main li.hover
+{
+	background: #d3e3f6;
+}
+#centerDiv li.main *
+{
+	text-align: left;
+}
+#stylishmenu, #stylishmenu ul
+{
+	padding: 0 2px;
+	background: white url(menu.gif);
+}
+#stylishmenu li.main
+{
+	background: inherit;
+	height: 20px;
+	padding-top: 1px;
+}
+#stylishmenu li.main li
+{
+	padding-top: 1px;
+	height: 21px;
+	//height: 22px; /*ie*/
+	white-space: nowrap;
+}
+#stylishmenu li.hover
+{
+	background: white url(menuh.gif);
+}
+#stylishmenu li.main li.disabled
+{
+	color: #bbb;
+	background: white url(menu.gif) !important;
+}
+#stylishmenu img.pic
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 2px;
+	position: relative;
+	top: 2px;
+}
+#stylishmenu img.liArrow
+{
+	top: 3px;
+	right: 0;
+}
+#stylishdiv div.cmDiv
+{
+	position: absolute;
+	left: 600px;
+	background: 0;
+}

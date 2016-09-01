@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>clickmenu demo page (template_001)</title>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript" src="jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="jquery.clickmenu.js"></script>
+<link rel="stylesheet" type="text/css" href="clickmenu.css" />
+<link rel="stylesheet" type="text/css" href="demopage_styles.css" />
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$.fn.clickMenu.setDefaults({arrowSrc:'arrow_right.gif'});
+	$('#mainmenu').clickMenu();
+});
+-->
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div id="divone">
+<ul id="mainmenu">
+<li>File
+	<ul><li>New&nbsp;window</li>
+		<li class="sep"></li>
+		<li>Save...</li>
+		<li>Print...</li>
+		<li class="sep"></li>
+		<li>Exit</li>
+	</ul>
+</li>
+<li>Edit
+	<ul><li>Undo</li>
+		<li>Redo</li>
+		<li class="sep"></li>
+		<li>Cut</li>
+		<li>Copy</li>
+		<li>Paste<ul><li>All</li><li>Something</li></ul></li>
+		<li>Delete</li>
+	</ul>
+</li>
+<li>Bookmarks
+	<ul><li>Bookmark&nbsp;manager</li>
+		<li class="sep"></li>
+		<li>some&nbsp;bookmark</li>
+		<li>another&nbsp;bookmark</li>
+		<li class="sep"></li>
+		<li>Imported&nbsp;bookmarks
+			<ul><li>bookmark&nbsp;one</li>
+				<li>bookmark&nbsp;two</li>
+				<li>bookmark&nbsp;three</li>
+			</ul>
+		</li>
+	</ul>
+</li>
+<li>Help
+	<ul><li>Help&nbsp;index</li>
+		<li class="sep"></li>
+		<li>About...</li>
+	</ul>
+</li>
+</ul>
+</div> <!-- div id="divone" -->
+</body>
+</html>

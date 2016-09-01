@@ -1,0 +1,57 @@
+DIV.cmDiv {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BACKGROUND-COLOR: #eee; BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid
+}
+.clickMenu {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CURSOR: default; PADDING-TOP: 0px
+}
+.clickMenu {
+	LIST-STYLE-TYPE: none
+}
+.clickMenu UL {
+	LIST-STYLE-TYPE: none
+}
+.clickMenu UL {
+	BORDER-BOTTOM: black 1px solid; MIN-WIDTH: 100px; BORDER-LEFT: black 1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #eee; MARGIN: 0px; PADDING-LEFT: 2px; WIDTH: 100%; PADDING-RIGHT: 2px; FLOAT: left; BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 2px
+}
+.clickMenu DIV.outerbox {
+	MIN-WIDTH: 106px; DISPLAY: none
+}
+.clickMenu DIV.inner {
+	MARGIN: 0px; TOP: 20px; LEFT: 0px
+}
+.clickMenu DIV.inner DIV.outerbox {
+	MARGIN: 0px; TOP: -3px; LEFT: 90px
+}
+.clickMenu LI {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 20px; PADDING-TOP: 0px
+}
+.clickMenu LI.main {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #eee; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FLOAT: left; HEIGHT: 20px; PADDING-TOP: 0px
+}
+.clickMenu LI.main LI {
+	Z-INDEX: 200; MIN-WIDTH: 78px
+}
+.clickMenu LI.hover {
+	Z-INDEX: 100 !important; BACKGROUND-COLOR: #aaa
+}
+.clickMenu IMG.liArrow {
+	POSITION: absolute; TOP: 0.41em; RIGHT: 5px
+}
+.clickMenu A {
+	COLOR: black; CURSOR: default; TEXT-DECORATION: none
+}
+HTML > BODY DIV.outerbox {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 5px; PADDING-TOP: 0px
+}
+HTML > BODY DIV.shadowbox1 {
+	POSITION: absolute; WIDTH: 5px; BOTTOM: 5px; BACKGROUND: url(myshadow.png) no-repeat right top; HEIGHT: 100%; RIGHT: 0px
+}
+HTML > BODY DIV.shadowbox2 {
+	POSITION: absolute; WIDTH: 100%; BOTTOM: 0px; BACKGROUND: url(myshadow.png) left bottom; HEIGHT: 5px; RIGHT: 5px
+}
+HTML > BODY DIV.shadowbox3 {
+	POSITION: absolute; WIDTH: 5px; BOTTOM: 0px; BACKGROUND: url(myshadow.png) no-repeat right bottom; HEIGHT: 5px; RIGHT: 0px
+}
+HTML > BODY .innerbox {
+	MARGIN: 0px
+}

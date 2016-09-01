@@ -1,0 +1,128 @@
+body {
+	margin: 0px;
+	font-family: verdana, arial, helvetica, sans-serif
+}
+#divone {
+	z-index: 10;
+	border-bottom: gray 1px solid;
+	position: fixed;
+	border-left: 0px;
+	padding-bottom: 0px;
+	background-color: #eee;
+	padding-left: 5px;
+	width: 100%;
+	padding-right: 0px;
+	border-top: 0px;
+	top: 0px;
+	border-right: 0px;
+	padding-top: 0px
+}
+#divone div.cmdiv {
+	border-bottom: 0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px
+}
+#divone li.hover {
+	background-color: #dedede
+}
+#divone li.main li.hover {
+	background-color: #4a93e3
+}
+hr {
+	border-bottom: #bbb 1px solid;
+	border-left: #bbb 0px solid;
+	padding-bottom: 0px;
+	margin: 4px 2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	height: 1px;
+	border-top: #bbb 0px solid;
+	border-right: #bbb 0px solid;
+	padding-top: 0px
+}
+#helper {
+	margin-top: 20px
+}
+li.sep {
+	margin: 2px 0px;
+	width: 100%;
+	float: left;
+	height: 0px;
+	font-size: 0px;
+	border-top: gray 1px solid;
+	fmargin-bottom: 0px
+}
+li li {
+	clear: left
+}
+#centerdiv {
+	position: absolute;
+	width: 200px;
+	top: 200px;
+	left: 550px
+}
+#centerdiv li.main {
+	text-align: center;
+	width: 198px;
+	background: white
+}
+#centerdiv li.hover {
+	background: #d3e3f6
+}
+#centerdiv li.main ul {
+	background: #ebf5ff
+}
+#centerdiv li.main li.hover {
+	background: #d3e3f6
+}
+#centerdiv li.main * {
+	text-align: left
+}
+#stylishmenu {
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background: url(menu.gif) white;
+	padding-top: 0px
+}
+#stylishmenu ul {
+	padding-bottom: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background: url(menu.gif) white;
+	padding-top: 0px
+}
+#stylishmenu li.main {
+	background: none transparent scroll repeat 0% 0%;
+	height: 20px;
+	padding-top: 1px
+}
+#stylishmenu li.main li {
+	white-space: nowrap;
+	height: 22px;
+	padding-top: 1px
+}
+#stylishmenu li.hover {
+	background: url(menuh.gif) white
+}
+#stylishmenu li.main li.disabled {
+	background: url(menu.gif) white;
+	color: #bbb
+}
+#stylishmenu img.pic {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	top: 2px;
+	margin-right: 2px
+}
+#stylishmenu img.liarrow {
+	top: 3px;
+	right: 0px
+}
+#stylishdiv div.cmdiv {
+	position: absolute;
+	background: 0px 50%;
+	left: 600px
+}

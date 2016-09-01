@@ -1,0 +1,65 @@
+<html>
+<!-- saved from url: http://www.phpeveryday.com/articles/jQuery-UI-Tab-Events-P992.html -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>jQuery UI Tabs Example 1</title>
+<!--
+<link rel="stylesheet" type="text/css" href="development-bundle/themes/base/jquery.ui.all.css" />
+<link rel="stylesheet" type="text/css" href="css/tabSelect.css">
+<script type="text/javascript" src="development-bundle/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="development-bundle/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="development-bundle/ui/jquery.ui.tabs.js"></script>
+
+-->
+	<link type="text/css" href="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/themes/base/jquery.ui.all.css" rel="stylesheet" />
+<!--
+	<link type="text/css" href="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/themes/base/jquery.ui.core.css" rel="stylesheet" />
+	<link type="text/css" href="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/themes/base/jquery.ui.tabs.css" rel="stylesheet" />
+	<script type="text/javascript" src="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/jquery-1.4.2.js"></script>
+-->
+
+ <script src="/FrameWork/scripts/ui.tabs/jquery-latest.js"></script>
+	<script type="text/javascript" src="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/ui/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/ui/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/ui/jquery.ui.tabs.js"></script>
+<!--
+	<link type="text/css" href="/JavaScript/jQuery.plugin/jquery-ui/jquery-ui-1.8.4.custom/development-bundle/demos/demos.css" rel="stylesheet" />
+-->
+
+
+<!--
+ <link href="/FrameWork/scripts/ui.tabs/ui.tabs.css" rel="stylesheet" type="text/css" />  
+	<link rel="stylesheet" type="text/css" href="tabSelect.css">
+ <script type="text/javascript" src="/FrameWork/scripts/ui.tabs/ui.core.js"></script>
+ <script type="text/javascript" src="/FrameWork/scripts/ui.tabs/ui.tabs.js"></script>
+-->
+<script type="text/javascript">
+	$(function(){
+		function handleSelect(event, tab) {
+			alert(tab.index);
+/*
+			$("<p>").text("The tab at index " + tab.index +
+			" was selected").addClass("status-message ui-corner-all").
+			appendTo($(".ui-tabs-nav", "#myTabs")).fadeOut(5000);
+*/
+		}	
+		var tabOpts = {
+			select:handleSelect
+		};
+		$("#myTabs").tabs(tabOpts);
+	});
+</script>
+</head>
+<body>
+<div id="myTabs">
+	<ul>
+	<li><a href="#a">Tab 1aaaaaaaaaaaaaaaaa</a></li>
+	<li><a href="#b">Tab 2bbbbbbbbbbbbbbbbbb</a></li>
+	</ul>
+	<div id="a">This is the content panel linked to the first tab,
+	it is shown by default.</div>
+	<div id="b">This content is linked to the second tab and will
+	be shown when its tab is clicked.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from http://p.sohei.org/stuff/jquery/clickmenu/demo/demo.html -->
+<html>
+<head>
+<title>clickmenu demo page</title>
+<meta content="text/html; charset=Shift_JIS" http-equiv=content-type>
+<!----
+<script type=text/javascript src="jquery-1.1.4.pack.js"></script>
+----->
+<script type=text/javascript src="jquery-latest.js"></script>
+<script type=text/javascript src="jquery.bgiframe.min.js"></script>
+<script type=text/javascript src="jquery.clickmenu.js"></script>
+<link rel=stylesheet type=text/css href="clickmenu.css">
+<script type=text/javascript><!--
+$(document).ready(function(){
+	$.fn.clickmenu.setdefaults({arrowsrc:'arrow_right.gif'});
+	$('#mainmenu').clickmenu();
+	$('#menu1').clickmenu();
+	$('#menu2').clickmenu();
+	//use another arrow - image from http://www.famfamfam.com/lab/icons/silk/
+	$('#stylishmenu').clickmenu({arrowsrc:'arrow_right.png', onclick:function(){
+		var a = $(this).find('>a');
+		if ( a.length )
+		{
+			//close the menu
+			alert($(a).text() + ' was clicked');
+			$('#stylishmenu').trigger('closemenu');
+		}
+		return false; //stop default action
+	}}); 
+});
+--></script>
+
+<STYLE type=text/css>
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.6001.18928"></HEAD>
+<BODY>
+<DIV id=divone>
+<UL id=mainmenu>
+  <LI>File 
+  <UL>
+    <LI>New&nbsp;window </LI>
+    <LI class=sep>
+    <LI>Save... 
+    <LI>Print... </LI>
+    <LI class=sep>
+    <LI>Exit </LI></UL>
+  <LI>Edit 
+  <UL>
+    <LI>Undo 
+    <LI>Redo </LI>
+    <LI class=sep>
+    <LI>Cut 
+    <LI>Copy 
+    <LI>Paste
+    <UL>
+      <LI>All
+      <LI>Something</LI></UL>
+    <LI>Delete </LI></UL>
+  <LI>Bookmarks 
+  <UL>
+    <LI>Bookmark&nbsp;manager </LI>
+    <LI class=sep>
+    <LI>some&nbsp;bookmark 
+    <LI>another&nbsp;bookmark </LI>
+    <LI class=sep>
+    <LI>Imported&nbsp;bookmarks 
+    <UL>
+      <LI>bookmark&nbsp;one 
+      <LI>bookmark&nbsp;two 
+      <LI>bookmark&nbsp;three </LI></UL></LI></UL>
+  <LI>Help 
+  <UL>
+    <LI>Help&nbsp;index </LI>
+    <LI class=sep>
+    <LI>About... </LI></UL></LI></UL></DIV>
+<DIV id=helper></DIV>
+<UL id=menu1>
+  <LI>one level 
+  <UL>
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats 
+    <LI>thats </LI></UL>
+  <LI><A href="http://p.sohei.org/stuff/jquery/clickmenu/demo/demo.html#">no 
+  level</A> 
+  <LI>two levels 
+  <UL>
+    <LI>thats 
+    <UL>
+      <LI>test 
+      <UL>
+        <LI>test</LI></UL></LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL>
+    <LI>thats 
+    <UL>
+      <LI>test</LI></UL></LI></UL>
+  <LI>Item one 
+  <UL>
+    <LI>stuff_stuff_stuff_stuff 
+    <LI>more stuff</A> 
+    <LI>stuff inside</A> 
+    <UL>
+      <LI>stuff&nbsp;1&nbsp;stuff_stuff_stuff_stuff&nbsp;stuff_stuff_stuff_stuff 
+
+      <UL>
+        <LI>test 
+        <LI>test2 </LI></UL>
+      <LI>stuff 2 
+      <LI>stuff 3 </LI></UL>
+    <LI>exit </LI></UL>
+  <LI>Item two 
+  <UL>
+    <LI>some item 
+    <LI>some item 
+    <LI>some item </LI></UL></LI></UL><BR>
+<FORM><SELECT><OPTION selected>test</OPTION><OPTION>test2</OPTION></SELECT> 
+<SELECT><OPTION selected>for correct display 
+in</OPTION><OPTION>test2</OPTION></SELECT> <SELECT><OPTION selected>Internet 
+  Explorer 6</OPTION><OPTION>test2</OPTION></SELECT> </FORM>
+<DIV id=centerdiv>
+<UL id=menu2>
+  <LI>click to select something 
+  <UL>
+    <LI>red 
+    <LI>green 
+    <LI>blue 
+    <LI>cups</A> 
+    <UL>
+      <LI>small&nbsp;cup 
+      <LI>cup 
+      <LI>big&nbsp;cup </LI></UL></LI></UL></LI></UL></DIV>
+<DIV id=stylishdiv>
+<UL id=stylishmenu>
+  <LI><A title="some link" 
+  href="http://p.sohei.org/stuff/jquery/clickmenu/demo/404.html">Stylish 
+menu</A><!-- images from http://www.famfamfam.com/lab/icons/silk/ --> 
+  <UL>
+    <LI><IMG class=pic src="clickmenu_demo_page.files/exclamation.png"><A 
+    href="http://p.sohei.org/stuff/jquery/clickmenu/demo/demo.html#">enabled 
+    1</A> 
+    <LI><IMG class=pic src="clickmenu_demo_page.files/exclamation.png"><A 
+    href="http://p.sohei.org/stuff/jquery/clickmenu/demo/demo.html#">enabled 
+    2</A> 
+    <LI class=disabled><IMG class=pic 
+    src="clickmenu_demo_page.files/exclamation.png">disabled 
+    <LI><IMG class=pic src="clickmenu_demo_page.files/exclamation.png">submenu 
+    <UL>
+      <LI class=disabled><IMG class=pic 
+      src="clickmenu_demo_page.files/exclamation.png">an&nbsp;item 
+      <LI><IMG class=pic src="clickmenu_demo_page.files/exclamation.png"><A 
+      href="http://p.sohei.org/stuff/jquery/clickmenu/demo/demo.html#">an&nbsp;item</A> 
+      </LI></UL></LI></UL></LI></UL></DIV>
+<DIV 
+style="BORDER-BOTTOM: gray 1px solid; BORDER-LEFT: gray 1px solid; MARGIN: 20px; WIDTH: 500px; BACKGROUND: lightblue; HEIGHT: 2000px; BORDER-TOP: gray 1px solid; BORDER-RIGHT: gray 1px solid">very 
+long test container to test the fixed menu at the top (not working in 
+IE!)</DIV></BODY></HTML>
