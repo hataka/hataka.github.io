@@ -101,7 +101,11 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 <h1>Menu</h1>
 <p style="white-space: nowrap;">ここはサイドバーです。</p>
 <h2>Page</h2>
+<!--
 <h3 onClick="hyoji('disp1');">Hataka's Site</h3>
+-->
+<h3 onClick="$(this).next().toggle()">Hataka's Site</h3>
+
 <table id="disp1" border="0"><tr><td>
 <ul>
  <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
