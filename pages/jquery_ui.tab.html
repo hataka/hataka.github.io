@@ -17,6 +17,8 @@
  <script type="text/javascript">
 	$(document).ready(function (){
       $('#tabC > ul').tabs();   // Slide effect
+		$("#navigator").load("../template/Navigator.html");
+		$("#sidebar").load("../template/SideBar.html");
 	});
 
 	function GetHeight(ID,NAME){
@@ -44,6 +46,15 @@
 </script>
 </head>
 <body style="margin:0;">
+<header>
+<h1> Hataka の GitHub ホームページへようこそ！</h1>
+</header>
+<div id="contents">
+<nav id="navigator">
+</nav>
+<div id="main">
+<center><h3>Top Page</h3></center>
+<article id="article">
 <div id="tabC" style="margin:0px;">
   <ul>   
     <li><a href="#tabC1"><span>tabC1</span></a></li>
@@ -64,6 +75,10 @@
   <div id="tabC4">
   </div>
 </div>
+</article>
+<!--main--></div>
+<aside id="sidebar">
+</aside>
 	<hr>
   <div style="text-align:right; margin-right:1em;">
 	<SCRIPT language="JavaScript"><!---
@@ -72,5 +87,11 @@
 	//--></SCRIPT>
   </div>
   <p align="center"></p>
+<!--contents--></div>
+<footer>
+<div id="copyright">&copy;WEB DESIGN LAB</div>
+</footer>
+<!--wrapper--></div>
+
 </body>
 </html>
