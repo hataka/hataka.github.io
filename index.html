@@ -7,9 +7,9 @@
   <script src="scripts/jquery-latest.js"></script>
  <script>
 	$(document).ready(function (){
-      //$('#tabC > ul').tabs();   // Slide effect
+		$("#article").load("pages/FrontPage.html");
+		//$('#tabC > ul').tabs();   // Slide effect
 		//OK 
-		//$("#article").load("menu.html");
 		/*
 		 NO
 		$.get("http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", function(data){
@@ -79,66 +79,6 @@
 <div id="main">
 <center><h3>Top Page</h3></center>
 <article id="article">
-<section>
-<h2>Memo</h2>
-<hr>
-<h5>クリックジャッキングとは</h5>
-悪意のあるサイト上の特定箇所をクリックさせ、別サイトの設定情報を変更させる」攻撃手法の事です。
-攻撃者は、悪意のあるサイトにiframeで別サイトを埋め込み、それを視覚的に見えないよう工夫することで、ユーザーが気づかないうちに、
-別サイトの設定情報を変更することを期待しています。
-<p/>
-仮に、その別サイトが個人情報の公開・非公開を設定できるものであった場合、
-悪意のあるサイトで公開状態にさせられ、攻撃者にその個人情報が取得されてしまいます。
-<h5>クリックジャッキング対策</h5>
-対策方法として、Web サイトから返されるHTTP レスポンスヘッダに、
-「X-Frame-Options」 ヘッダを含めておくことで、ブラウザがこの値を解釈し、
-クリックジャッキングを防止する(iframe内の表示を制御)手法があります。
-
-ヘッダの値としては、
-
-DENY：フレーム内のページ表示を全ドメインで禁止
-SAMEORIGIN：フレーム内のページ表示を同一ドメイン内のみ許可
-ALLOW-FROM uri：フレーム内のページ表示を指定されたドメインに限り許可
-があり、用途に応じて設定が可能です。
-
-</section>
-<section>
-<h2>Links</h2>
-<hr>
-<h3>Hataka's Site</h3>
-<ul>
- <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
- <li><span><a href="https://hataka.github.io/BubbleChartExample/BubbleChartExample.swf" target="_blank">BubbleChartExample.swf</a></span></li>
- <li><span><a href="https://github.com/hataka/hataka.github.io/" target="_blank">hataka.github.io</a></span></li>
-</ul>
-<h3>GitHub Site</h3>
-<ul>
- <li><span><a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/" targwt="_blank">脱GitHub初心者を目指す人のREADMEマークダウン使いこなし術 | ゆっくりと…</a></span></li>
- <li><span><a href="http://mae.chab.in/archives/2440" target="_blank">忘れがちなGit & GitHubのTips集 – ファイル/ディレクトリ/リポジトリの変更時の操作 | mae's blog</a></span></li>
- <li><span><a href="http://qiita.com/nyoro_712/items/08596c7ae522f85cca28" target="_blank">Windows7でGit Bashのホームディレクトリと作業ディレクトリを変更する - Qiita</a></span></li>
- <li><span><a href="http://tech.admax.ninja/2014/10/08/how-to-write-wiki-of-github/" target="_blank">【GitHub】GitHubのWikiを書く | AdMax Tech Blog</a></span></li>
- <li><span><a href="https://github.com/d3/d3/wiki" target="_blank">Home · d3/d3 Wiki</a></span></li>
- <li><span><a href="https://github.com/gpjt/webgl-lessons" target="_blank">gpjt/webgl-lessons</a></span></li>
- <li><span><a href="https://github.com/WebGLSamples" target="_blank">WebGL Samples</a></span></li>
- <li><span><a href="https://github.com/KhronosGroup/WebGL" target="_blank">KhronosGroup/WebGL: The Official Khronos WebGL Repository</a></span></li>
- <li><span><a href="https://github.com/jquery/jquery" target="_blank">jquery/jquery: jQuery JavaScript Library</a></span></li>
-<!--
- <li><span><a href="" target="_blank"></a></span></li>
- <li><span><a href="" target="_blank"></a></span></li>
--->
-</ul>
-</section>
-<section>
-<h2>ToDo</h2>
-<hr>
-<center>
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-cute.mp3" controls />
-<!--  chrome NG 
-<iframe src="https://azu.github.io/github-issue-widget/?owner=efcl&repo=efcl.github.io&limit=10&state=closed"
-<iframe src="http://wisdom.sakura.ne.jp/index.html" width="640" height="480" style="display:block; margin: 0 auto;">&nbsp;</iframe>
-        allowtransparency="true" frameborder="0" scrolling="0" width="100%">&nbsp;</iframe>
--->
-</center>
 </section>
 </article>
 <!--main--></div>
