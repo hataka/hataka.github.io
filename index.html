@@ -71,7 +71,11 @@
 		+"</OBJECT>";
 	return swf;
 	}
-
+}
+function load_swf(path){
+	var html = embed_swf(path);
+		$("#article").html(html);
+}
 
 
 </script>
