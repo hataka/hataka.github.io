@@ -18,6 +18,55 @@
 //eval( new ActiveXObject("Scripting.FileSystemObject").
 //		OpenTextFile("/npp.5.5.1-euc/npp.5.5.1-6/ansi/script/php.default.min.js", 1).ReadAll());
 
+
+	function hyoji(disp){
+  	if (document.getElementById(disp).style.display=="block") {
+    	document.getElementById(disp).style.display="none";
+  	} else {
+    	document.getElementById(disp).style.display="block";
+  	}
+	}
+
+	function toggle_sidebar(){
+  	if (document.getElementById("sidebar").style.width=="0%") {
+    	document.getElementById("sidebar").style.width="17%";
+    	document.getElementById("main").style.width="83%";
+  	} else {
+    	document.getElementById("sidebar").style.width="0%";
+    	document.getElementById("main").style.width="100%";
+  	}
+	}
+
+	function loadPage(dest,site){
+		$(dest).load(site);
+	}
+
+	function embed_swf(path){
+		var swf= "<OBJECT CLASSID=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"" 
+		+"  CODEBASE=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,0,0\""
+		+"  WIDTH=640 HEIGHT=480>"
+		+"  <PARAM NAME=movie VALUE=\""+path+ "\">"
+		+"  <PARAM NAME=bgcolor VALUE=#FFFFFF>"
+		+"  <PARAM NAME=LOOP VALUE=false>"
+		+"  <PARAM NAME=quality VALUE=high>"
+		+"  <EMBED SRC=\"" +path+ "\""
+		+"    WIDTH=640 HEIGHT=480 bgcolor=#FFFFFF LOOP=false QUALITY=high" 
+		+"    PLUGINSPAGE=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\""
+		+"    TYPE=\"application/x-shockwave-flash\">" 
+		+"  </EMBED>"
+		+"</OBJECT>";
+		return swf;
+	}
+
+
+	function load_swf(path){
+		var html = "<center>"+embed_swf(path)+"</center>";
+		$("#article").html(html);
+	}
+
+
+
+
 //////////////////////////////////////////////////////////////////
 // iframe çÇÇ≥é©ìÆåvéZ ÉâÉCÉuÉâÉä
 function GetHeight(ID,NAME){

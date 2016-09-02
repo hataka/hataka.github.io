@@ -1,0 +1,38 @@
+<h1>Menu</h1>
+<p style="white-space: nowrap;">ここはサイドバーです。</p>
+<h2>Page</h2>
+<!-- <h3 onClick="hyoji('disp1');">Hataka's Site</h3> -->
+<h3 onClick="$(this).next().toggle()">Hataka's Site</h3>
+<table id="disp1" border="0"><tr><td>
+<ul>
+ <li><span><a href="https://github.com/hataka" target="_blank">hataka's GitHub Site</a></span></li>
+ <li><span><a href="https://hataka.github.io/BubbleChartExample/BubbleChartExample.swf" target="_blank">BubbleChartExample.swf</a></span></li>
+<!--
+ <li><span><a href="#" onClick="loadPage('#article','BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+-->
+ <li><span><a href="#" onClick="load_swf('../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+
+ <li><span><a href="https://github.com/hataka/hataka.github.io/" target="_blank">hataka.github.io</a></span></li>
+<li><span><a href="https://hataka.github.io/pages/jquery_ui.tab.html" target="_self">jquery_ui.tab</a></span></li>
+</ul>
+</td></tr></table>
+
+<h2>GitHub</h2>
+<!-- <h3 onClick="hyoji('disp2');">Repository</h3>-->
+<h3 onClick="$(this).next().toggle()">Repository</h3>
+<table id="disp2" border="0"><tr><td>
+	<ul>
+		<li><span><a href="#" onClick="loadPage('#article','menu.html');return false;">Menu.html</a></span></li>
+		<li><span><a href="#" onClick="loadPage('#article','pages/jquery_ui.tab.html');return false;">jquery_ui.tab</a></span></li>
+		<!-- だめ
+		<li><span><a href="#" onClick="loadPage('#article','http://kahata.travel.coocan.jp/php1/sslib/sslib255.php');return false;">sslib255.php</a></span></li>
+		-->
+	</ul>
+</td></tr></table>
+
+<h2>Web</h2>
+<!--<h3 onClick="hyoji('disp3');">Search Engin</h3>-->
+<h3 onClick="$(this).next().toggle()">Search Engin</h3>
+<table id="disp3" border="0"><tr><td>
+</td></tr></table>
+

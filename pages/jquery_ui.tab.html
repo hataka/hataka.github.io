@@ -10,17 +10,20 @@
  <style type="text/css" media="all">
 	.note {color:red;}
  </style>
- <script src="../scripts/jquery-latest.js"></script>
- <script type="text/javascript" src="../scripts/ui.tabs/ui.core.js"></script>
- <script type="text/javascript" src="../scripts/ui.tabs/ui.tabs.js"></script>
- <link href="../scripts/ui.tabs/ui.tabs.css" rel="stylesheet" type="text/css" />  
- <script type="text/javascript">
+	<script src="scripts/jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="../scripts/ui.tabs/ui.core.js"></script>
+	<script type="text/javascript" src="../scripts/ui.tabs/ui.tabs.js"></script>
+	<link href="../scripts/ui.tabs/ui.tabs.css" rel="stylesheet" type="text/css" />  
+	<script src="scripts/common_lib.js"></script>
+	
+	<script type="text/javascript">
 	$(document).ready(function (){
-      $('#tabC > ul').tabs();   // Slide effect
-		$("#navigator").load("../template/Navigator.html");
-		$("#sidebar").load("../template/SideBar.html");
+		$('#tabC > ul').tabs();   // Slide effect
+		$("#navigator").load("../menus/Navigator.html");
+		$("#sidebar").load("../menus/SideBar.html");
 	});
 
+	/*
 	function GetHeight(ID,NAME){
 		if (document.height){
 			document.getElementById(ID).style.height = this.frames[NAME].document.height +30 +"px" ;
@@ -28,7 +31,7 @@
 		else{
 			document.getElementById(ID).style.height = "800px";
 		}
-}
+	}
 
 	function load_file(target,url){
 		$(target).css("background-color","white");
@@ -65,12 +68,12 @@
 	function loadPage(dest,site){
 		$(dest).load(site);
 	}
-
+	*/
 </script>
 </head>
 <body style="margin:0;">
 <header>
-<h1> Hataka の GitHub ホームページへようこそ！</h1>
+<h1>Hataka's GitHub Page</h1>
 <center><h3>Jquery UI Tab Page</h3></center>
 </header>
 <div id="contents">
@@ -93,7 +96,7 @@
   TabC2
   </div> 
   <div id="tabC3">
-  tab3
+  Tab3
   </div>   
   <div id="tabC4">
   </div>
