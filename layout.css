@@ -96,10 +96,11 @@ header h2 {
 		padding: 10px;
 	}
 #contents aside {
+	border: 1px solid gray;
 	float: right;/*サイドバーを左に配置したい場合はrightを指定*/
 	width: 17%; /*240px;*/
 	overflow: auto; /*scroll;*/ /*hidden;*/
-	border: 1px solid gray; /* background: #fff; #ccc;*/
+	/* background: #fff; #ccc;*/
 }
 
 #contents aside p {
