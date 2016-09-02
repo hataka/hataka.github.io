@@ -20,55 +20,8 @@
 	$(document).ready(function (){
 		$('#tabC > ul').tabs();   // Slide effect
 		$("#navigator").load("../menus/Navigator.html");
-		$("#sidebar").load("../menus/SideBar.html");
+		$("#sidemenu").load("../menus/SideBar.html");
 	});
-
-	/*
-	function GetHeight(ID,NAME){
-		if (document.height){
-			document.getElementById(ID).style.height = this.frames[NAME].document.height +30 +"px" ;
-		}
-		else{
-			document.getElementById(ID).style.height = "800px";
-		}
-	}
-
-	function load_file(target,url){
-		$(target).css("background-color","white");
-		$(target).css("color","black");
-		$(target).load(url);
-	}
-
-	function load_iframe(target,url,height){
-		$(target).html("<iframe frameborder=no scrolling=auto style='border: 1px gray dotted;' width=100% height=" + height + "px src =" + url + "></iframe>");
-	}
-
-	function iframe_autoheight(target, url){
-		$(target).html("<iframe id='Z' name='newZ' onload='GetHeight(this.id,this.name)' frameborder='no' style='border: 0px gray dotted;' width=100% src ='" + url + "'></iframe>");
-	}
-
-	function hyoji(disp){
-  	if (document.getElementById(disp).style.display=="block") {
-    	document.getElementById(disp).style.display="none";
-  	} else {
-    	document.getElementById(disp).style.display="block";
-  	}
-	}
-
-	function toggle_sidebar(){
-  	if (document.getElementById("sidebar").style.width=="0%") {
-    	document.getElementById("sidebar").style.width="17%";
-    	document.getElementById("main").style.width="83%";
-  	} else {
-    	document.getElementById("sidebar").style.width="0%";
-    	document.getElementById("main").style.width="100%";
-  	}
-	}
-
-	function loadPage(dest,site){
-		$(dest).load(site);
-	}
-	*/
 </script>
 </head>
 <body style="margin:0;">
@@ -104,6 +57,8 @@
 </article>
 <!--main--></div>
 <aside id="sidebar">
+<div id="sidemenu">
+</div>
 </aside>
 	<hr>
   <div style="text-align:right; margin-right:1em;">
