@@ -31,16 +31,13 @@
 	  function flashloader(path){
 		//load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');
 		//https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml
-	  	
 	  	load_swf('#tabC1','https://hataka.github.io/' + path +'.swf');
 		var site1= '<a href="'+ 'https://github.com/hataka/hataka.github.io/blob/master/'+ path + '.mxml'+ '" target=_blank>'+ path + '.mxml</a>';
-	  	alert(site1);
 	  	$("#tabC2_cotent").html(site1);
 	  	//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
 			//url:      "http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", //NG
 			//url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
 			//url:      "https://raw.githubusercontent.com/hataka/hataka.github.io/master/BubbleChartExample/BubbleChartExample.mxml",
-		               //https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml
 	  	$.ajax({
 			type:     "GET",
 			url:      path + ".mxml",
@@ -51,7 +48,6 @@
 				//SyntaxHighlighter.highlight();
   			}
 		});
-  	  
 	  }
 
 </script>
