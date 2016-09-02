@@ -26,6 +26,13 @@
 		$("#navigator").load("../menus/Navigator.html");
 		$("#sidemenu").load("../menus/SideBar.html");
 	});
+	function test(){
+		$.get( "BubbleChartExample/BubbleChartExample.mxml", function( data ) {
+  		//$( ".result" ).html( data );
+  		alert( "Load was performed." + data );
+		});
+	}
+
 </script>
 </head>
 <body style="margin:0;">
@@ -90,6 +97,7 @@
 <aside id="sidebar">
 <ul>
  <li><span><a href="#" onClick="load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+ <li><span><a href="#" onClick="test();return false;">BubbleChartExample.mxml</a></span></li>
 </ul>
 
 <div id="sidemenu"></div>
