@@ -47,8 +47,9 @@
 
   </ul>   
   <div id="tabC1" style="margin:0.5;">
-	TabC1<br><p>
-
+	TabC1
+	<div id="tabC1_cotent"></div>
+<!--	
 <OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
 	CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,0,0"
 	WIDTH=640 HEIGHT=480>
@@ -62,9 +63,11 @@
 		TYPE="application/x-shockwave-flash"> 
 	</EMBED>
 </OBJECT>
+-->
 	</div>
   <div id="tabC2">
   TabC2
+	<div id="tabC2_cotent"></div>
 	<h1>Hello SyntaxHighlighter</h1>
 	<pre class="brush: js;">
 		function helloSyntaxHighlighter()
@@ -75,15 +78,23 @@
   </div> 
   <div id="tabC3">
   Tab3
+	<div id="tabC3_cotent"></div>
   </div>   
   <div id="tabC4">
+  Tab4
+	<div id="tabC4_cotent"></div>
   </div>
 </div>
 </article>
 <!--main--></div>
 <aside id="sidebar">
-<div id="sidemenu">
-</div>
+<ul>
+ <li><span><a href="#" onClick="load_swf("#tabC1_cotent",'../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+</ul>
+
+<div id="sidemenu"></div>
+
+
 </aside>
 	<hr>
   <div style="text-align:right; margin-right:1em;">
