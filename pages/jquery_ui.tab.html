@@ -32,12 +32,17 @@
 		//alert("koko");
 		//$("#sh").load("../scripts/common_lib.js");
 		
-				
-		$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
   		$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
-		});
-	
-		
+  url:      "../Bubbl//eChartExample/BubbleChartExample.mxml",
+  dataType: "text",
+  success: func//tion(data){
+  		$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
+  }
+});
+		//$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
+  		//$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
+		//});
+
 	}
 
 </script>
