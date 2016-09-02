@@ -21,39 +21,26 @@
 	<script src="../scripts/common_lib.js"></script>
 	
 	<script type="text/javascript">
-	$(document).ready(function (){
+	  $(document).ready(function (){
 		$('#tabC > ul').tabs();   // Slide effect
 		$("#navigator").load("../menus/Navigator.html");
 		$("#sidemenu").load("../menus/SideBar.html");
 	});
-	function test(){
+	
+	  function test(){
 		load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');
 		//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
-		//alert("koko");
-		//$("#sh").load("../scripts/common_lib.js");
-
- 
-
-
-
-
-
-$.ajax({
-  type:     "GET",
-  url:      "../BubbleChartExample/BubbleChartExample.mxml",
-  dataType: "text",
-  success: function(data){
-    //alert(data);
-    $("#tabC2_cotent" ).text(data);
-//SyntaxHighlighter.highlight();
-  }
-});
-
-		//$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
-  		//$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
-		//});
-
-	}
+		$.ajax({
+			type:     "GET",
+			url:      "../BubbleChartExample/BubbleChartExample.mxml",
+  			dataType: "text",
+			success: function(data){
+				//alert(data);
+				$("#code1" ).text(data);
+				//SyntaxHighlighter.highlight();
+  			}
+		});
+  	  }
 
 </script>
 </head>
@@ -96,7 +83,9 @@ $.ajax({
 	</div>
   <div id="tabC2">
   TabC2
-	<pre id="tabC2_cotent"></pre>
+	<div id="tabC2_cotent"></div>
+	<h3>Code:</h3>
+	<pre id="code1" style="border:1px solid gray;"></pre>
 	<h1>Hello SyntaxHighlighter</h1>
 	<pre id="sh" class="brush: xml;">
 	<?xml version="1.0"?>
@@ -163,15 +152,6 @@ $.ajax({
         <mx:Legend dataProvider="{bubblechart}"/>            
     </mx:Panel>
 </mx:Application>
-	
-	
-	
-	
-	
-	
-		function helloSyntaxHighlighter(){
-			return "hi!";
-		}
 	</pre>
   </div> 
   <div id="tabC3">
