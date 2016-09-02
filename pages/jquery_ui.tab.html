@@ -43,9 +43,9 @@ $.ajax({
   url:      "../BubbleChartExample/BubbleChartExample.mxml",
   dataType: "text",
   success: function(data){
-    alert(data);
-    $("#sh" ).text(data);
-SyntaxHighlighter.highlight();
+    //alert(data);
+    $("#sh" ).html("<pre>"+data+"</pre>");
+//SyntaxHighlighter.highlight();
   }
 });
 
