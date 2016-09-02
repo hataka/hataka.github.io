@@ -5,7 +5,8 @@
  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
  <meta http-equiv="Content-Style-Type" content="text/css" />
  <meta http-equiv="Content-Script-Type" content="text/javascript" />
- <title><?php echo $target; ?></title>
+ <base href="https://hataka.github.io/" />
+ <title>Jquery UI Tab</title>
  <link href="../layout.css" rel="stylesheet" type="text/css" />  
  <style type="text/css" media="all">
 	.note {color:red;}
@@ -27,15 +28,18 @@
 		$("#sidemenu").load("https://hataka.github.io/menus/SideBar.html");
 	});
 	
-	  function test(){
-		load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');
-		//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
+	  function flashloader(path){
+		//load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');
+		load_swf('#tabC1',path +'.swf');
+		var site1= '<a href="'+ path + '.mxml'+ '" target=_blank>'+ path + '.mxml</a>';
+	  	$("#tabC2_content").html(site1);
+	  	//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
 			//url:      "http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", //NG
 			//url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
-
+			//url:      "https://raw.githubusercontent.com/hataka/hataka.github.io/master/BubbleChartExample/BubbleChartExample.mxml",
 	  	$.ajax({
 			type:     "GET",
-			url:      "https://raw.githubusercontent.com/hataka/hataka.github.io/master/BubbleChartExample/BubbleChartExample.mxml",
+			url:      path + ".mxml",
   			dataType: "text",
 			success: function(data){
 				//alert(data);
@@ -43,7 +47,8 @@
 				//SyntaxHighlighter.highlight();
   			}
 		});
-  	  }
+  	  
+	  }
 
 </script>
 </head>
@@ -172,9 +177,9 @@
 
 <div id="sidemenu"></div>
 <hr>
+<h2>Tab Menu</h2>
 <ul>
- <li><span><a href="#" onClick="load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
- <li><span><a href="#" onClick="test();return false;">BubbleChartExample.mxml</a></span></li>
+ <li><span><a href="#" onClick="flashloader('../BubbleChartExample/BubbleChartExample');return false;">BubbleChartExample</a></span></li>
 </ul>
 
 
