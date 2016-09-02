@@ -32,6 +32,32 @@
 		//alert("koko");
 		//$("#sh").load("../scripts/common_lib.js");
 
+    $.ajax({
+      method: "get",
+      url: "../BubbleChartExample/BubbleChartExample.mxml",
+      success: function(data) {
+        var brush = new SyntaxHighlighter.brushes.Python();
+        brush.init({ toolbar: false });
+        
+        var el = document.createElement('div');
+        el.innerHTML = data;
+        var preTags = $(el).find("pre");
+
+        for(var i=0;i<preTags.length;i++) {
+          var code = $(preTags[i]).text();
+          code = brush.getHtml(code);
+          $(preTags[i]).html(code);
+        }
+
+        $("#tabC2").html(el.innerHTML);
+      }
+    });
+
+
+
+
+
+/*
 $.ajax({
   type:     "GET",
   url:      "../BubbleChartExample/BubbleChartExample.mxml",
@@ -41,6 +67,7 @@ $.ajax({
     $( "#tabC2_cotent" ).html("<pre class=\"brush: js;\">" +data+ "</pre>");
   }
 });
+*/
 		//$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
   		//$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
 		//});
