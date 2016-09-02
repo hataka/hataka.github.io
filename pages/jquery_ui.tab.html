@@ -29,8 +29,8 @@
 	function test(){
 		alert("koko");
 		$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
-  		//$( ".result" ).html( data );
-  		alert( "Load was performed." + data );
+  		$( "#sh" ).text( data );
+  		//alert( "Load was performed." + data );
 		});
 	}
 
@@ -77,7 +77,7 @@
   TabC2
 	<div id="tabC2_cotent"></div>
 	<h1>Hello SyntaxHighlighter</h1>
-	<pre class="brush: js;">
+	<pre id="sh" class="brush: js;">
 		function helloSyntaxHighlighter()
 		{
 			return "hi!";
