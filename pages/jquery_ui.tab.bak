@@ -23,8 +23,8 @@
 	<script type="text/javascript">
 	  $(document).ready(function (){
 		$('#tabC > ul').tabs();   // Slide effect
-		$("#navigator").load("https://hataka.github.io/menus/Navigator.html");
-		$("#sidemenu").load("https://hataka.github.io/menus/SideBar.html");
+		$("#navigator").load("../menus/Navigator.html");
+		$("#sidemenu").load("../menus/SideBar.html");
 	});
 	
 	  function test(){
@@ -32,7 +32,7 @@
 		//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
 		$.ajax({
 			type:     "GET",
-			url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
+			url:      "../BubbleChartExample/BubbleChartExample.mxml",
   			dataType: "text",
 			success: function(data){
 				//alert(data);
