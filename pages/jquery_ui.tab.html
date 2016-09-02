@@ -38,7 +38,7 @@ $.ajax({
   dataType: "text",
   success: function(data){
     alert(data);
-    $( "#sh" ).text(data);
+    $( "#tabC2_cotent" ).html("<pre class=\"brush: js;\">" +data+ "</pre>");
   }
 });
 		//$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
