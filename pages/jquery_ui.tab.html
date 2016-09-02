@@ -30,9 +30,11 @@
 	  function test(){
 		load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');
 		//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
-		$.ajax({
+			//url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
+
+	  	$.ajax({
 			type:     "GET",
-			url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
+			url:      "http://kahata.travel.coocan.jp/php1/sslib/sslib255.php",
   			dataType: "text",
 			success: function(data){
 				//alert(data);
@@ -85,7 +87,7 @@
   TabC2
 	<div id="tabC2_cotent"></div>
 	<h1>Source Code</h1>
-	<pre id="code1" style="padding:1em;border:1px solid gray;font-weight:bold;"></pre>
+	<pre id="code1" style="padding:0.5em;border:1px solid gray;font-weight:bold;"></pre>
 	<h1>Hello SyntaxHighlighter</h1>
 	<pre id="sh" class="brush: xml;">
 	<?xml version="1.0"?>
@@ -166,12 +168,13 @@
 </article>
 <!--main--></div>
 <aside id="sidebar">
+
+<div id="sidemenu"></div>
+<hr>
 <ul>
  <li><span><a href="#" onClick="load_swf('#tabC1','../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
  <li><span><a href="#" onClick="test();return false;">BubbleChartExample.mxml</a></span></li>
 </ul>
-
-<div id="sidemenu"></div>
 
 
 </aside>
