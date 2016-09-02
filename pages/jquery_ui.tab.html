@@ -31,12 +31,13 @@
 		//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
 		//alert("koko");
 		//$("#sh").load("../scripts/common_lib.js");
-		
-  		$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
-  url:      "../Bubbl//eChartExample/BubbleChartExample.mxml",
+
+$.ajax({
+  type:     "GET",
+  url:      "../BubbleChartExample/BubbleChartExample.mxml",
   dataType: "text",
-  success: func//tion(data){
-  		$( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
+  success: function(data){
+    $( "#tabC2" ).html("<pre class=\"brush: js;\">" +data+ "</pre>" );
   }
 });
 		//$.get( "../BubbleChartExample/BubbleChartExample.mxml", function( data ) {
