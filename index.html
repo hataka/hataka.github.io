@@ -6,6 +6,10 @@
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <link rel="stylesheet" href="layout.css" type="text/css">
   <script src="scripts/jquery-1.4.2.js"></script>
+	<script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="scripts/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
   <script src="scripts/common_lib.js"></script>
  <script>
 	$(document).ready(function (){
@@ -41,6 +45,15 @@
 <center><h3>Top Page</h3></center>
 <article id="article">
 </article>
+
+<h1>Hello SyntaxHighlighter</h1>
+<pre class="brush: js;">
+function helloSyntaxHighlighter()
+{
+	return "hi!";
+}
+</pre>
+
 <!--main--></div>
 <aside id="sidebar">
 
