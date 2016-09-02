@@ -57,7 +57,7 @@
 		+"</OBJECT>";
 		return swf;
 	}
-
+ 
 
 	function load_swf(target,path){
 		var html = "<center>"+embed_swf(path)+"</center>";
