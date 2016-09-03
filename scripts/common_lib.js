@@ -470,6 +470,7 @@ function fromJSON(strdata){
 第3引数にパラメーターが存在しなかった場合に返したい値を指定しておけば
 指定した値が返ってくる。
 */
+/*
 function getQuerystring(loc, key, default_)
 {   
    if (default_==null) default_="";   
@@ -483,6 +484,46 @@ function getQuerystring(loc, key, default_)
    else  
     return qs[1];
 }   
+*/
+
+/**
+ * URL解析して、クエリ文字列を返す
+ * @returns {Array} クエリ文字列
+ */
+function getUrlVars(){
+	var vars = [], max = 0, hash = "", array = "";
+	var url = window.location.search;
+		//?を取り除くため、1から始める。複数のクエリ文字列に対応するため、&で区切る
+	hash  = url.slice(1).split('&');	
+	max = hash.length;
+	for (var i = 0; i < max; i++) {
+		array = hash[i].split('=');	//keyと値に分割。
+		vars.push(array[0]);	//末尾にクエリ文字列のkeyを挿入。
+		vars[array[0]] = array[1];	//先ほど確保したkeyに、値を代入。
+	}
+	return vars;
+}
+
+
+function GetQueryString() {
+  if (1 < document.location.search.length) {
+	// 最初の1文字 (?記号) を除いた文字列を取得する
+		var query = document.location.search.substring(1);
+		// クエリの区切り記号 (&) で文字列を配列に分割する
+		var parameters = query.split('&');
+		var result = new Object();
+		for (var i = 0; i < parameters.length; i++) {
+			// パラメータ名とパラメータ値に分割する
+			var element = parameters[i].split('=');
+			var paramName = decodeURIComponent(element[0]);
+			var paramValue = decodeURIComponent(element[1]);
+			// パラメータ名をキーとして連想配列に追加する
+			result[paramName] = decodeURIComponent(paramValue);
+		}
+		return result;
+	}
+	return null;
+}
 
 /*
 function location2filepath(href){
