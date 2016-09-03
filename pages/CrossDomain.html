@@ -43,6 +43,7 @@
         var headline = $(res.responseText).find('a.tsh').text();
         //alert(headline);
         alert(res.responseText);
+    		$('#container').html(res.responseText);
     	}
 		});
 
