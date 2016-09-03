@@ -42,7 +42,7 @@
     	success: function(res) {
         var headline = $(res.responseText).find('a.tsh').text();
         //alert(headline);
-        alert(res.responseText);
+        //alert(res.responseText);
     		$('#container').html(res.responseText);
     	}
 		});
@@ -81,8 +81,8 @@
 <!--main--></div>
 <aside id="sidebar">
 <div id="sidemenu"></div>
-<h2>Cross Domain</h2>
 <hr>
+<h2>Cross Domain</h2>
 <h3 onClick="$(this).next().toggle()">Sslib</h3>
 <table id="disp2" border="0"><tr><td>
 	<ul>
@@ -96,6 +96,14 @@
 		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib223.php');return false;">sslib223</a></span></li>
 	</ul>
 </td></tr></table>
+
+<h3 onClick="$(this).next().toggle()">Simple Viewer</h3>
+<table id="disp2" border="0"><tr><td>
+	<ul>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/FrameWork/Dirlister/SimpleViewer.class.php?path=http://kahata.travel.coocan.jp//picture/Sea/sea005.jpg&main=true');return false;">Sea005.jpg</a></span></li>
+	</ul>
+</td></tr></table>
+
 
 </aside>
 <!--contents--></div>
