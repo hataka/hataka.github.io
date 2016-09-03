@@ -32,10 +32,12 @@
 			});
 		});
 */
-		$('#container').load('http://google.com'); // SERIOUSLY!
+		//$('#container').load('http://google.com'); // SERIOUSLY!
+		$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // SERIOUSLY!
  
 		$.ajax({
-    	url: 'http://news.bbc.co.uk',
+    	//url: 'http://news.bbc.co.uk',
+    	url: 'http://kahata.travel.coocan.jp/php1.sslib/sslib211.php',
     	type: 'GET',
     	success: function(res) {
         var headline = $(res.responseText).find('a.tsh').text();
@@ -54,8 +56,8 @@
 </nav>
 <div id="main">
 <center><h3>Cross Domain Test</h3></center>
-<article id="container">
-</article>
+<div id="container">
+</div>
 <article id="article">
 	<h1 id="qunit-header">jQuery-plus test suite</h1>
 	<h2 id="qunit-banner"></h2>
