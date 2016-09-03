@@ -33,12 +33,12 @@
 		});
 */
 		//$('#container').load('http://google.com'); // SERIOUSLY!
-		$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // SERIOUSLY!
+		//$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // NG okasii !! SERIOUSLY!
  
-    	//url: 'http://news.bbc.co.uk',
 		$.ajax({
     	url: 'http://kahata.travel.coocan.jp/php1/sslib/sslib211.php',
     	type: 'GET',
+ 			dataType: "text",
     	success: function(res) {
         var headline = $(res.responseText).find('a.tsh').text();
         //alert(headline);
@@ -46,6 +46,17 @@
     		$('#container').html(res.responseText);
     	}
 		});
+	
+	function loadSite(target,site){
+		$.ajax({
+			url: site,
+			type: 'GET',
+			dataType: "text",
+			success: function(res) {
+				$(target).html(res.responseText);
+			}
+		});
+	}	
 
 </script>
  </head>
@@ -58,21 +69,34 @@
 </nav>
 <div id="main">
 <center><h3>Cross Domain Test</h3></center>
-<div id="container">
-</div>
 <article id="article">
 	<h1 id="qunit-header">jQuery-plus test suite</h1>
 	<h2 id="qunit-banner"></h2>
 	<div id="qunit-testrunner-toolbar"></div>
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
+	<div id="container"></div>
 </article>
 
 <!--main--></div>
 <aside id="sidebar">
+<div id="sidemenu"></div>
+<h2>Cross Domain</h2>
+<hr>
+<h3 onClick="$(this).next().toggle()">Sslib</h3>
+<table id="disp2" border="0"><tr><td>
+	<ul>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib211.php');return false;">sslib211</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib212.php');return false;">sslib212</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib213.php');return false;">sslib213</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib214.php');return false;">sslib214</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib215.php');return false;">sslib215</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib221.php');return false;">sslib221</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib222.php');return false;">sslib222</a></span></li>
+		<li><span><a href="#" onClick="loadSite('#container','http://kahata.travel.coocan.jp/php1/sslib/sslib223.php');return false;">sslib223</a></span></li>
+	</ul>
+</td></tr></table>
 
-<div id="sidemenu">
-</div>
 </aside>
 <!--contents--></div>
 <footer>
