@@ -35,13 +35,14 @@
 		//$('#container').load('http://google.com'); // SERIOUSLY!
 		$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // SERIOUSLY!
  
-		$.ajax({
     	//url: 'http://news.bbc.co.uk',
-    	url: 'http://kahata.travel.coocan.jp/php1.sslib/sslib211.php',
+		$.ajax({
+    	url: 'http://kahata.travel.coocan.jp/php1/sslib/sslib211.php',
     	type: 'GET',
     	success: function(res) {
         var headline = $(res.responseText).find('a.tsh').text();
-        alert(headline);
+        //alert(headline);
+        alert(res.responseText);
     	}
 		});
 
