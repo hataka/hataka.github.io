@@ -37,8 +37,8 @@
 	  	//$("#tabC2_cotent").html(site1);
 
 		var viewer = 'http://kahata.travel.coocan.jp/FrameWork/Dirlister/SimpleViewer.class.php';
-		//var baseurl ='https://raw.githubusercontent.com/hataka/hataka.github.io/master/';
-		var baseurl ='https://hataka.github.io/';
+		var baseurl ='https://raw.githubusercontent.com/hataka/hataka.github.io/master/';
+		//var baseurl ='https://hataka.github.io/';
 	  	var site2 = viewer + '?path=' + baseurl + path + '.mxml' + '&main=true';
 	  	loadSite("#tabC2_cotent", site2);
 
@@ -54,7 +54,7 @@
 				//alert(data);
 				$("#code1" ).text(data);
 				$("#code1").addClass("brush: xml;");
-				SyntaxHighlighter.all();
+				SyntaxHighlighter.highlight();
 				//$("#sh" ).text(data);
  				//var brush = new SyntaxHighlighter.brushes.JScript(),
                 //html;
