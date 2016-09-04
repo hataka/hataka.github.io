@@ -46,6 +46,8 @@
 			success: function(data){
 				//alert(data);
 				$("#code1" ).text(data);
+				$("#code1").addClass("brush: xml;");
+				SyntaxHighlighter.all();
 				//$("#sh" ).text(data);
  				//var brush = new SyntaxHighlighter.brushes.JScript(),
                 //html;
@@ -54,9 +56,9 @@
             	//document.getElementById('sh').innerHTML = html; 				
 				//SyntaxHighlighter.highlight();
   				//SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
- 				$('#code1').each(function () {
-            		SyntaxHighlighter.all();
-        		});
+ 				//$('#code1').each(function () {
+            	//	SyntaxHighlighter.all();
+        		//});
 			}
 		});
 	  }
