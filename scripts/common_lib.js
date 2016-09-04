@@ -18,6 +18,16 @@
 //eval( new ActiveXObject("Scripting.FileSystemObject").
 //		OpenTextFile("/npp.5.5.1-euc/npp.5.5.1-6/ansi/script/php.default.min.js", 1).ReadAll());
 
+	function loadSite(target,site){
+		$.ajax({
+			url: site,
+			type: 'GET',
+			dataType: "text",
+			success: function(res) {
+				$(target).html(res.responseText);
+			}
+		});
+	}	
 
 	function hyoji(disp){
   	if (document.getElementById(disp).style.display=="block") {
