@@ -50,8 +50,8 @@
 			url:      path,
   			dataType: "text",
 			success: function(data){
-				alert(data);
-				$("#code1" ).text(data);
+				alert(data.responseText);
+				$("#code1" ).text(data.responseText);
 				$("#code1").addClass("brush: xml;");
 				SyntaxHighlighter.highlight();
   				//SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
