@@ -46,9 +46,14 @@
 			success: function(data){
 				//alert(data);
 				$("#code1" ).text(data);
-				$("#sh" ).text(data);
+				//$("#sh" ).text(data);
+ 				var brush = new SyntaxHighlighter.brushes.JScript(),
+                html;
+            	brush.init({ toolbar: false });
+            	html = brush.getHtml(data);
+            	document.getElementById('sh').innerHTML = html; 				
 				//SyntaxHighlighter.highlight();
-  				SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
+  				//SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
 			}
 		});
 	  }
