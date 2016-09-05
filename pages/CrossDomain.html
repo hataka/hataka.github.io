@@ -69,7 +69,9 @@
 			type: 'GET',
 			dataType: "xml",
 			success: function(res) {
-				$(target).text(res.responseText);
+				var original = res.responseText;
+				var stripped = original.replace(/(<([^>]+)>)/ig,"");
+				$(target).text(stripped);
 			}
 		});
 		$(target).addClass("brush: cpp;");
