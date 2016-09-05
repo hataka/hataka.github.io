@@ -75,10 +75,10 @@
 				//alert(stripped);
 				$(target).html(stripped);
 				//$(target).text(stripped);
-				$(target).text(original);
+				//$(target).text(original);
 			}
 		});
-		$(target).addClass("brush: cpp;");
+		//$(target).addClass("brush: cpp;");
 		SyntaxHighlighter.highlight();
 	}	
 
@@ -105,7 +105,26 @@ ul.example2 { margin: 10px 50px; }
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
 	<div id="container"></div>
-	<pre id="source" ></pre>
+	<pre id="source" "brush: cpp;">
+// -*- mode: cpp -*-  Time-stamp: <2016-08-12 09:40:52 kahata>
+/*================================================================
+ * file: main.cpp
+ * path; F:\WisdomSoft\framework\programming\cpp\work\cpp002\cpp002_1\main.cpp
+ * created: Time-stamp: <2016-08-12 09:40:52 kahata>
+ * $Id$
+ * To compile:
+ * To run: 
+ * link: http://wisdom.sakura.ne.jp/
+ * link: http://wisdom.sakura.ne.jp/system/winapi/win32/win2.html
+ * description: 
+ *================================================================*/
+#include  <iostream>
+
+int main() {
+	std::cout  << "Kitty on your lap";
+	return 0;
+}	
+	</pre>
 </article>
 
 <!--main--></div>
