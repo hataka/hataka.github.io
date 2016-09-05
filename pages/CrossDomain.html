@@ -70,11 +70,11 @@
 			dataType: "text",
 			success: function(res) {
 				var original = res.responseText;
-				alert(original);
+				//alert(original);
 				var stripped = original.replace(/(<([^>]+)>)/ig,"");
-				//alert(stripped);
-				$(target).html(stripped);
-				//$(target).text(stripped);
+				alert(stripped);
+				//$(target).html(stripped);
+				$(target).text(stripped);
 				//$(target).text(original);
 			}
 		});
