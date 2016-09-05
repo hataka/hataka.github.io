@@ -36,13 +36,13 @@
 		//$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // NG okasii !! SERIOUSLY!
  
 		$.ajax({
-    	url: 'http://kahata.travel.coocan.jp/php1/sslib/sslib211.php',
+    	url: 'https://drive.google.com/uc?export=download&id=0Bye2xdoobG-JaW00LXplLWFsWEk',
     	type: 'GET',
  			dataType: "text",
     	success: function(res) {
-        var headline = $(res.responseText).find('a.tsh').text();
-        //alert(headline);
-        //alert(res.responseText);
+        //var headline = $(res.responseText).find('a.tsh').text();
+        alert(headline);
+        alert(res.responseText);
     		$('#container').html(res.responseText);
     	}
 		});
