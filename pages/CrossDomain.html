@@ -73,7 +73,7 @@
 				//alert(original);
 				var stripped = original.replace(/(<([^>]+)>)/ig,"");
 				alert(stripped);
-				stripped = stripped.replace("&#xd;","\n");
+				stripped = stripped.replace(/&#xd;/,"\n");
 				//$(target).html(stripped);
 				$(target).text(stripped);
 				//$(target).text(original);
