@@ -69,10 +69,10 @@
 			type: 'GET',
 			dataType: "xml",
 			success: function(res) {
-				$(target).html(res.responseText);
+				$(target).text(res.responseText);
 			}
 		});
-		$(target).addClass("brush: xml;");
+		$(target).addClass("brush: cpp;");
 		SyntaxHighlighter.highlight();
 	}	
 
