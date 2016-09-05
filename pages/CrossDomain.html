@@ -67,15 +67,17 @@
 		$.ajax({
 			url: site,
 			type: 'GET',
-			dataType: "xml",
+			dataType: "text",
 			success: function(res) {
 				var original = res.responseText;
+				alert(original);
 				var stripped = original.replace(/(<([^>]+)>)/ig,"");
-				$(target).text(stripped);
+				//$(target).text(stripped);
+				$(target).text(original);
 			}
 		});
 		$(target).addClass("brush: cpp;");
-		SyntaxHighlighter.highlight();
+		//SyntaxHighlighter.highlight();
 	}	
 
 </script>
