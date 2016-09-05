@@ -70,15 +70,16 @@
 			dataType: "text",
 			success: function(res) {
 				var original = res.responseText;
-				alert(original);
+				//alert(original);
 				var stripped = original.replace(/(<([^>]+)>)/ig,"");
-				alert(stripped);
-				$(target).text(stripped);
+				//alert(stripped);
+				$(target).html(original);
+				//$(target).text(stripped);
 				//$(target).text(original);
 			}
 		});
 		$(target).addClass("brush: cpp;");
-		SyntaxHighlighter.highlight();
+		//SyntaxHighlighter.highlight();
 	}	
 
 </script>
@@ -104,7 +105,7 @@ ul.example2 { margin: 10px 50px; }
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
 	<div id="container"></div>
-	<pre id="source" ></pre>
+	<pre id="source" style="border:1px solid gray; padding:0.5em;"></pre>
 </article>
 
 <!--main--></div>
