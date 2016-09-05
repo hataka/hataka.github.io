@@ -71,12 +71,12 @@
 			success: function(res) {
 				var original = res.responseText;
 				//alert(original);
-				var stripped = original.replace(/(<([^>]+)>)/ig,"");
-				alert(stripped);
-				stripped = stripped.replace(/\&#xd;/,"\n");
+				//var stripped = original.replace(/(<([^>]+)>)/ig,"");
+				//alert(stripped);
+				//stripped = stripped.replace(/\&#xd;/,"\n");
 				//$(target).html(stripped);
-				$(target).text(stripped);
-				//$(target).text(original);
+				//$(target).text(stripped);
+				$(target).html(original);
 			}
 		});
 		//$(target).addClass("brush: cpp;");
