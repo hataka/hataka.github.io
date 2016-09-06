@@ -67,13 +67,32 @@
 		+"</OBJECT>";
 		return swf;
 	}
- 
 
-	function load_swf(target,path){
+    function load_swf(target,path){
 		var html = "<center>"+embed_swf(path)+"</center>";
 		$(target).html(html);
 	}
 
+    function embed_video(path){
+        var video = "<video src=\"" + path + "\" width=640 height=480 controls />";
+        return video;
+    }
+
+    function load_video(target,path){
+        var html= "<center>" + embed_video(path)+"</center>";
+        $(target).html(html);
+    }
+	
+    function embed_audio(path){
+        var audio = "<audio src=\"" + path + "\" controls />";
+        return audio;
+    }
+
+    function load_audio(target,path){
+        var html= "<center>" + embed_audio(path)+"</center>";
+        $(target).html(html);
+    }
+ 
 
 
 
