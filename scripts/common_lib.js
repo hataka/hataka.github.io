@@ -49,7 +49,35 @@
 
 	function loadPage(dest,site){
 		$(dest).load(site);
-	}
+		/*
+        $.ajax({
+			url: site,
+			type: 'GET',
+			async: false,
+            data: {id:'aaa'},
+            dataType: "html",
+			success: function(res) {
+				$(dest).html(res);
+			}
+		});
+    */
+    }
+
+	function loadjwplayer(dest,site){
+	    $.ajax({
+	        url: 'pages/jwplayer.html',
+	        type: 'GET',
+	        async: false,
+	        dataType: "html",
+	        success: function (res) {
+	            //alert(site);
+	            //alert(res);
+	            tmp = res.replace(/file: hoge/, "file: \'" + site+ "\'");
+	            //alert(tmp);
+	            $(dest).html(tmp);
+	        }
+	    });
+    }
 
 	function embed_swf(path){
 		var swf= "<OBJECT CLASSID=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"" 

@@ -40,13 +40,26 @@
 <div id="sidemenu">
 </div>
 <h1>Front Menu</h1>
-<ul>
+<ul class="sidemenu">
 <!--
  <li><span><a href="#" onClick="loadPage('#article','BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
 -->
  <li><span><a href="#" onClick="load_swf('#article','../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
- <li><span><a href="#" onClick="loadPage('#article','pages/jwplayer.html');return false;">jwplayer</a></span></li>
- <li><span><a href="#" onClick="loadPage('#sidemenu','menus/framemenu.html');return false;">FrameMenu</a></span><br></li>
+</ul>
+<h3 onClick="$(this).next().toggle()">JWPlayer</h3>
+<table id="disp2" border="0"><tr><td>
+	<ul class="sidemenu">
+ <li><span><a href="#" onClick="loadPage('#article','pages/jwplayer.html?aaaa');return false;">ウルトラセブン</a></span></li>
+ <li><span><a href="#" onClick="loadjwplayer('#article','http://www.youtube.com/v/dAwEas-b46o');return false;">羊は安らかに草を食み</a></span></li>
+<!--
+ <li><span><a href="#" onClick="loadPage2('#article','http://www.youtube.com/v/dAwEas-b46o');return false;">jwplayer</a></span></li>
+-->
+<li><span><a href="pages/jwplayer.html?http://www.youtube.com/v/dAwEas-b46o" target="_blank">同上(_blank)</a></span></li>
+	</ul>
+</td></tr></table>
+<p></p>
+	<ul class="sidemenu">
+    <li><span><a href="#" onClick="loadPage('#sidemenu','menus/framemenu.html');return false;">FrameMenu</a></span><br></li>
 </ul>
 </aside>
 <!--contents--></div>

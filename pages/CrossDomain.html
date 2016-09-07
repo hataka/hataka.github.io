@@ -74,27 +74,7 @@
          //SyntaxHighlighter.highlight();
      }
 
-     function loadJWPlayer(target, site) {
-         var playerInstance = jwplayer(target);
-         playerInstance.setup({
-             flashplayer: "../scripts/jwplayer/player.swf",
-             //file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
-             file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
-             //file: site,
-             //file: "20071204202914890.flv",
-             //image: "tsure-shon.jpg",
-             //playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
-             displaytitle: false,
-             controlbar: "bottom",
-             width: 800,
-             //width: 280,
-             height: 600
-             //height:24
-         });
-         //
-         alert('koko');
-     }
-
+ 
 
 </script>
 <style type="text/css">
@@ -177,5 +157,41 @@ document.write("<font color='green'>　使用されている OS は " + window.n
   </div>
 </footer>
 <!--wrapper--></div>
+<script>
+    function loadJWPlayer(target, site) {
+         //$(target).text(site);
+         
+         var so = new SWFObject('../scripts/jwplayer/player.swf', 'mpl', '800', '600', '9');
+         so.addParam('allowfullscreen', 'true');
+         so.addParam('allowscriptaccess', 'always');
+         so.addParam('wmode', 'opaque');
+         so.addVariable("type", "lighttpd");
+         so.addVariable('file', site);
+         so.addVariable('controlbar', 'over');
+         so.write(target);
+         
+
+         /*
+         var playerInstance = jwplayer(target);
+         playerInstance.setup({
+         flashplayer: "../scripts/jwplayer/player.swf",
+         //file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
+         file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
+         //file: site,
+         //file: "20071204202914890.flv",
+         //image: "tsure-shon.jpg",
+         //playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
+         displaytitle: false,
+         controlbar: "bottom",
+         width: 800,
+         //width: 280,
+         height: 600
+         //height:24
+         });
+         //
+         //alert('koko');
+        */
+     }
+</script>
 </body>
 </html>

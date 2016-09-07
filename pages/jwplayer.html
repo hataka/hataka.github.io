@@ -1,3 +1,4 @@
+<html>
 <head>
 	<!-- encode hint 畑　和彦 -->
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -9,27 +10,34 @@
 <script src="../scripts/jwplayer/jquery.swfobject.1-1-1.min.js"></script>
 <script type="text/javascript" src="../scripts/jwplayer/jwplayer.js"></script>
 <script type="text/javascript">
-$(document).ready(
-	function () {
-		var playerInstance = jwplayer("mediaplayer");
-		//jwplayer("mediaplayer").setup({
-		playerInstance.setup({
-			//flashplayer: "http://kahata.travel.coocan.jp/Flash/EmbedFlashPlayer/jwplayer-5-master/jwplayer-5-master/jwPlayer5/player.swf",
-			flashplayer: "../scripts/jwplayer/player.swf",
-			//file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
-			file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
-			//file: "20071204202914890.flv",
-			//image: "tsure-shon.jpg",
-			//playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
-			displaytitle: false,
-			controlbar:"bottom",
-			width: 1000,
-			//width: 280,
-			height:750
-			//height:24
-		});
-});
+    var hoge = window.location.search;
+    //alert(hoge);
+    if (!hoge) { hoge= "https://www.youtube.com/watch?v=QD7hXT_a3fc";}
+    //var hoge = GetQueryString();
+    //hoge = hoge.replace(/^\?/, "");
+    $(document).ready(
+        function () {
+            var playerInstance = jwplayer("mediaplayer");
+            //jwplayer("mediaplayer").setup({
+            playerInstance.setup({
+                //flashplayer: "http://kahata.travel.coocan.jp/Flash/EmbedFlashPlayer/jwplayer-5-master/jwplayer-5-master/jwPlayer5/player.swf",
+                flashplayer: "../scripts/jwplayer/player.swf",
+                //file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
+                //file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
+                file: hoge,
+                //file: "20071204202914890.flv",
+                //image: "tsure-shon.jpg",
+                //playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
+                displaytitle: false,
+                controlbar: "bottom",
+                width: 1000,
+                //width: 280,
+                height: 750
+                //height:24
+            });
+        });
 </script>
+</head>
 <body>
 <h1>JW Player</h1>
 <div id="mediaplayer" style="margin: 0 auto">JW Player goes here</div>
