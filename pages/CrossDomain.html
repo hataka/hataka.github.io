@@ -16,76 +16,84 @@
 	<script type="text/javascript" src="../scripts/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
 	<link type="text/css" rel="stylesheet" href="../scripts/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
 	<script type="text/javascript">SyntaxHighlighter.all();</script>
-  <script src="../scripts/common_lib.js"></script>
+    <script src="../scripts/jwplayer/jquery.swfobject.1-1-1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jwplayer/jwplayer.js"></script>
+    <script src="../scripts/common_lib.js"></script>
  <script>
-	$(document).ready(function (){
-		//$("#article").load("pages/FrontPage.html");
-		//$("#navigator").load("https://hataka.github.io/menus/Navigator.html");
-		$("#navigator").load("../menus/Navigator.html");
-		//$("#sidemenu").load("https://hataka.github.io/menus/SideBar.html");
-		$("#sidemenu").load("../menus/SideBar.html");
-	});
+     $(document).ready(function () {
+         //$("#article").load("pages/FrontPage.html");
+         //$("#navigator").load("https://hataka.github.io/menus/Navigator.html");
+         $("#navigator").load("../menus/Navigator.html");
+         //$("#sidemenu").load("https://hataka.github.io/menus/SideBar.html");
+         $("#sidemenu").load("../menus/SideBar.html");
+     });
+     //$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // NG おかしい!! SERIOUSLY!
 
-/*
-	test('GET', function(){
-			expect(1);
-			stop();
-			jQuery.get('http://google.com', function(res){
-				ok(
-					!!(res && res.responseText),
-					GET Request to Google.com succeeded!'
-					);
-				start();
-			});
-		});
-*/
-		//$('#container').load('http://google.com'); // SERIOUSLY!
-		//$('#container').load('http://kahata.travel.coocan.jp/php1/sslib/sslib255.php'); // NG okasii !! SERIOUSLY!
- 
-		$.ajax({
-    	url: 'http://kahata.travel.coocan.jp/php1/sslib/sslib255.php',/* 'https://drive.google.com/uc?export=download&id=0Bye2xdoobG-JaW00LXplLWFsWEk',*/
-    	type: 'GET',
- 			dataType: "text",
-    	success: function(res) {
-        //var headline = $(res.responseText).find('a.tsh').text();
-        //alert(headline);
-        //alert(res.responseText);
-    		$('#container').html(res.responseText);
-    	}
-		});
-	
-	function loadSite(target,site){
-		$.ajax({
-			url: site,
-			type: 'GET',
-			dataType: "text",
-			success: function(res) {
-				$(target).html(res.responseText);
-			}
-		});
-	}	
+     $.ajax({
+         url: 'http://kahata.travel.coocan.jp/php1/sslib/sslib255.php', /* 'https://drive.google.com/uc?export=download&id=0Bye2xdoobG-JaW00LXplLWFsWEk',*/
+         type: 'GET',
+         dataType: "text",
+         success: function (res) {
+             //var headline = $(res.responseText).find('a.tsh').text();
+             //alert(headline);
+             //alert(res.responseText);
+             $('#container').html(res.responseText);
+         }
+     });
 
-	function loadCode(target,site){
-		$.ajax({
-			url: site,
-			type: 'GET',
-			dataType: "text",
-			success: function(res) {
-				var original = res.responseText;
-				//alert(original);
-				//var stripped = original.replace(/(<([^>]+)>)/ig,"");
-				//alert(stripped);
-				//stripped = stripped.replace(/\&#xd;/,"\n");
-				//$(target).html(stripped);
-				//$(target).text(stripped);
-				$(target).html(original);
-			}
-		});
-		$(target).css({'border':'1px solid gray','padding':'0.5em'});
-		//$(target).addClass("brush: cpp;");
-		//$(target).removeClass("brush: cpp;");
-		//SyntaxHighlighter.highlight();
-	}	
+     function loadSite(target, site) {
+         $.ajax({
+             url: site,
+             type: 'GET',
+             dataType: "text",
+             success: function (res) {
+                 $(target).html(res.responseText);
+             }
+         });
+     }
+
+     function loadCode(target, site) {
+         $.ajax({
+             url: site,
+             type: 'GET',
+             dataType: "text",
+             success: function (res) {
+                 var original = res.responseText;
+                 //alert(original);
+                 //var stripped = original.replace(/(<([^>]+)>)/ig,"");
+                 //alert(stripped);
+                 //stripped = stripped.replace(/\&#xd;/,"\n");
+                 //$(target).html(stripped);
+                 //$(target).text(stripped);
+                 $(target).html(original);
+             }
+         });
+         $(target).css({ 'border': '1px solid gray', 'padding': '0.5em' });
+         //$(target).addClass("brush: cpp;");
+         //$(target).removeClass("brush: cpp;");
+         //SyntaxHighlighter.highlight();
+     }
+
+     function loadJWPlayer(target, site) {
+         var playerInstance = jwplayer(target);
+         playerInstance.setup({
+             flashplayer: "../scripts/jwplayer/player.swf",
+             //file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
+             file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
+             //file: site,
+             //file: "20071204202914890.flv",
+             //image: "tsure-shon.jpg",
+             //playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
+             displaytitle: false,
+             controlbar: "bottom",
+             width: 800,
+             //width: 280,
+             height: 600
+             //height:24
+         });
+         //alert('koko');
+     }
+
 
 </script>
 <style type="text/css">
@@ -125,6 +133,7 @@ ul.example2 { margin: 10px 50px; }
 <div id="sidemenu"></div>
 <hr>
 <h1>Cross Domain</h1>
+<h2>Page Menu</h2>
 <ul class="sidemenu">
 <li><span><a href="#" onClick="loadPage('#sitemenu1','../menus/SSlib.html');return false;">sslib menu</a></span></li>
 </ul>
@@ -144,6 +153,14 @@ ul.example2 { margin: 10px 50px; }
 
 	</ul>
 </td></tr></table>
+<h3 onClick="$(this).next().toggle()">JWPlayer</h3>
+
+<table id="disp2" border="0"><tr><td>
+  <ul class="sidemenu">
+	<li><span><a href="#" onClick="loadJWPlayer('#container','https://www.youtube.com/watch?v=QD7hXT_a3fc');return false;">YouTube Seven</a></span></li>
+  </ul>
+</td></tr></table>
+
 </aside>
 <!--contents --></div>
 <footer>
