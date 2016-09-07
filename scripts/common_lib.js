@@ -1,6 +1,6 @@
 // -*- mode: js -*-  Time-stamp: <2010-07-28 12:57:22 kahata>
 /*================================================================
- * title: terminal ‹¤’Êƒ‰ƒCƒuƒ‰ƒŠ
+ * title: terminal å…±é€šãƒ©ã‚¤ãƒ–ãƒ©ãƒª
  * file: common_lib.js
  * path: F:\FrameWork\scripts\common_lib.js
  * url:  http://hata2/FrameWork/scripts/common_lib.js
@@ -10,8 +10,8 @@
  * To compile:
  * To run: 
  * link: 
- * description: terminal ‹¤’Êƒ‰ƒCƒuƒ‰ƒŠ
- *  fileŠÖŒW
+ * description: terminal å…±é€šãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+ *  fileé–¢ä¿‚
  *================================================================*/
 //////////////////////////////////////////////////////////////////
 // include
@@ -38,13 +38,16 @@
 	}
 
 	function toggle_sidebar(){
-  	if (document.getElementById("sidebar").style.width=="0%") {
-    	document.getElementById("sidebar").style.width="17%";
-    	document.getElementById("main").style.width="83%";
-  	} else {
-    	document.getElementById("sidebar").style.width="0%";
-    	document.getElementById("main").style.width="100%";
-  	}
+  	    if (document.getElementById("sidebar").style.width=="0%") {
+    	    document.getElementById("sidebar").style.width="17%";
+    	    document.getElementById("main").style.width="83%";
+    	    document.getElementById("toggle_sidebar").innerText="SideBaréè¡¨ç¤º";
+              	    
+        } else {
+    	    document.getElementById("sidebar").style.width="0%";
+    	    document.getElementById("main").style.width="100%";
+    	    document.getElementById("toggle_sidebar").innerText="SideBarè¡¨ç¤º";
+  	    }
 	}
 
 	function loadPage(dest,site){
@@ -126,7 +129,7 @@
 
 
 //////////////////////////////////////////////////////////////////
-// iframe ‚‚³©“®ŒvZ ƒ‰ƒCƒuƒ‰ƒŠ
+// iframe é«˜ã•è‡ªå‹•è¨ˆç®— ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 function GetHeight(ID,NAME){
 	if (document.height){
 		document.getElementById(ID).style.height = this.frames[NAME].document.height +40 +"px" ;
@@ -138,16 +141,16 @@ function GetHeight(ID,NAME){
 }
 
 //////////////////////////////////////////////////////////////////
-// String ƒ‰ƒCƒuƒ‰ƒŠ
+// String ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 /*
 function htmlspecialchars(strText){
 	return strText.replace(/&/g, "&amp;").replace(/"/g, "&quot;")
 		.replace(/</g, "&lt;").replace(/>/g, "&gt;");//'"
 }
 function nl2br(strText) {
-		// \n‚¾‚¯‚Å‚È‚­A\r‚à•ÏŠ·‚·‚é‚Ì‚ªƒ|ƒCƒ“ƒgB
-	// ‰üs‚Íƒuƒ‰ƒEƒU‚É‚æ‚Á‚ÄA\r\n‚¾‚Á‚½‚èA\n‚¾‚¯‚¾‚Á‚½‚è‚·‚é‚Ì‚ÅA
-	// ‚Ü‚¸Å‰‚É\r\n‚ğ•ÏŠ·‚µ‚ÄA‚»‚ÌŒã\n‚ğ•ÏŠ·‚·‚é
+		// \nã ã‘ã§ãªãã€\rã‚‚å¤‰æ›ã™ã‚‹ã®ãŒãƒã‚¤ãƒ³ãƒˆã€‚
+	// æ”¹è¡Œã¯ãƒ–ãƒ©ã‚¦ã‚¶ã«ã‚ˆã£ã¦ã€\r\nã ã£ãŸã‚Šã€\nã ã‘ã ã£ãŸã‚Šã™ã‚‹ã®ã§ã€
+	// ã¾ãšæœ€åˆã«\r\nã‚’å¤‰æ›ã—ã¦ã€ãã®å¾Œ\nã‚’å¤‰æ›ã™ã‚‹
 	strText = strText.replace(/\r\n/g,"<br />");
 	strText = strText.replace(/(\n|\r)/g, "<br />");
 	//	strText = "<pre>" + strText + "</pre>";
@@ -228,7 +231,7 @@ function str_replace (search, replace, subject, count) {
     return sa ? s : s[0];
 }
 //////////////////////////////////////////////////////////////////
-// ƒRƒ‚ƒ“ƒRƒ“ƒgƒ[ƒ‹ ƒ‰ƒCƒuƒ‰ƒŠ
+// ã‚³ãƒ¢ãƒ³ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 function OpenFileDialog(initdir) {
 	var dialog = new ActiveXObject("UserAccounts.CommonDialog");
 	dialog.Filter = "All Files|*.*|Text Files|*.txt|PHP Files|*.php";
@@ -236,13 +239,13 @@ function OpenFileDialog(initdir) {
 	dialog.InitialDir = initdir;
 
 	if (!dialog.ShowOpen()) {
-		alert("ƒtƒ@ƒCƒ‹‚Í‘I‘ğ‚³‚ê‚È‚©‚Á‚½‚İ‚½‚¢‚¾ccB");
+		alert("ãƒ•ã‚¡ã‚¤ãƒ«ã¯é¸æŠã•ã‚Œãªã‹ã£ãŸã¿ãŸã„ã â€¦â€¦ã€‚");
 		dialog = null;
 		return null;
 	}
 	else {
 		var FilePath = dialog.FileName;
-//		alert("‘I‘ğ‚µ‚½‚Ì‚Í‚±‚ê‚©H\n\"" + dialog.FileName + "\"");
+//		alert("é¸æŠã—ãŸã®ã¯ã“ã‚Œã‹ï¼Ÿ\n\"" + dialog.FileName + "\"");
 		dialog = null;
 		return FilePath;
 	}
@@ -256,7 +259,7 @@ function InputBox(msg){
 }
 
 //////////////////////////////////////////////////////////////////
-// file ƒ‰ƒCƒuƒ‰ƒŠ
+// file ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 // /cygdrive/f/FrameWork
 function cygdrive2windir(cygdrive){
 	var tmp = cygdrive.split('\/');
@@ -323,7 +326,7 @@ function filedir(filepath){
 function filebody(filepath){
 	var n = basename(filepath).lastIndexOf(".");
   return basename(filepath).substr(0,n); 
-//  ƒtƒ@ƒCƒ‹–¼ aaa.bbb.ccc.ddd.eee‚Ìê‡‚¨‚©‚µ‚¢
+//  ãƒ•ã‚¡ã‚¤ãƒ«å aaa.bbb.ccc.ddd.eeeã®å ´åˆãŠã‹ã—ã„
 //	var tmp;
 //	tmp = basename(filepath).split('.');
 //	return tmp[0];
@@ -357,11 +360,11 @@ End Function
 */
 
 //////////////////////////////////////////////////////////////////
-// FileSystemObject ƒ‰ƒCƒuƒ‰ƒŠ
+// FileSystemObject ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 function file(strFilePath){
-	var ForReading = 1; //“Ç‚İ‚İ
-	var ForWriting = 2; //‘‚«‚±‚İiã‘‚«ƒ‚[ƒhj
-	var ForAppending = 8; //‘‚«‚±‚İi’Ç‹Lƒ‚[ƒhj
+	var ForReading = 1; //èª­ã¿è¾¼ã¿
+	var ForWriting = 2; //æ›¸ãã“ã¿ï¼ˆä¸Šæ›¸ããƒ¢ãƒ¼ãƒ‰ï¼‰
+	var ForAppending = 8; //æ›¸ãã“ã¿ï¼ˆè¿½è¨˜ãƒ¢ãƒ¼ãƒ‰ï¼‰
 
 	var objFileSys;
 	var strCheckPath;
@@ -381,7 +384,7 @@ function file(strFilePath){
 		} while(objInFile.AtEndOfStream==false);
 		objInFile.Close();
 	} catch(e) {
-		WScript.echo(dirname(strFilePath) + "‚Éƒtƒ@ƒCƒ‹" + basename(strFilePath) + "‚ª‚ ‚è‚Ü‚¹‚ñ‚Å‚µ‚½B");
+		WScript.echo(dirname(strFilePath) + "ã«ãƒ•ã‚¡ã‚¤ãƒ«" + basename(strFilePath) + "ãŒã‚ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚");
 	}
    objFileSys = null;
    objInFile = null;
@@ -389,9 +392,9 @@ function file(strFilePath){
 }
 
 function file_get_contents(strFilePath){
-	var ForReading = 1; //“Ç‚İ‚İ
-	var ForWriting = 2; //‘‚«‚±‚İiã‘‚«ƒ‚[ƒhj
-	var ForAppending = 8; //‘‚«‚±‚İi’Ç‹Lƒ‚[ƒhj
+	var ForReading = 1; //èª­ã¿è¾¼ã¿
+	var ForWriting = 2; //æ›¸ãã“ã¿ï¼ˆä¸Šæ›¸ããƒ¢ãƒ¼ãƒ‰ï¼‰
+	var ForAppending = 8; //æ›¸ãã“ã¿ï¼ˆè¿½è¨˜ãƒ¢ãƒ¼ãƒ‰ï¼‰
    var objFileSys;
    var objInFile;
    var strFilePath;
@@ -404,7 +407,7 @@ function file_get_contents(strFilePath){
 //      WScript.echo(strData);
       objInFile.Close();
    } catch(e) {
-      WScript.echo(strScriptPath + "‚Éƒtƒ@ƒCƒ‹" + strFileName + "‚ª‚ ‚è‚Ü‚¹‚ñ‚Å‚µ‚½B");
+      WScript.echo(strScriptPath + "ã«ãƒ•ã‚¡ã‚¤ãƒ«" + strFileName + "ãŒã‚ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚");
    }
 	objFileSys = null;
    objInFile = null;
@@ -412,9 +415,9 @@ function file_get_contents(strFilePath){
 }
 
 function file_put_contents(strFilePath,strData){
-	var ForReading = 1; //“Ç‚İ‚İ
-	var ForWriting = 2; //‘‚«‚±‚İiã‘‚«ƒ‚[ƒhj
-	var ForAppending = 8; //‘‚«‚±‚İi’Ç‹Lƒ‚[ƒhj
+	var ForReading = 1; //èª­ã¿è¾¼ã¿
+	var ForWriting = 2; //æ›¸ãã“ã¿ï¼ˆä¸Šæ›¸ããƒ¢ãƒ¼ãƒ‰ï¼‰
+	var ForAppending = 8; //æ›¸ãã“ã¿ï¼ˆè¿½è¨˜ãƒ¢ãƒ¼ãƒ‰ï¼‰
 
 	var objFileSys;
 	var objOutFile;
@@ -427,11 +430,11 @@ function file_put_contents(strFilePath,strData){
 /**
 	http://www.atmarkit.co.jp/fwin2k/operation/wsh10/wsh10_02.html
 	CreateTextFile(filename [, overwrite] [, unicode])
-	‘æ1ƒpƒ‰ƒ[ƒ^ifilenamej •¶š—ñ | ì¬‚·‚éƒtƒ@ƒCƒ‹‚Ì–¼‘OBÈ—ª•s‰Â 
-	‘æ2ƒpƒ‰ƒ[ƒ^ioverwritej Boolean False ƒtƒ@ƒCƒ‹‚ª‘¶İ‚·‚éê‡A
-		True‚È‚ç‚Îƒtƒ@ƒCƒ‹‚ğã‘‚«‚·‚éBFalse‚È‚ç‚ÎƒGƒ‰[‚ª”­¶‚·‚é 
-	‘æ3ƒpƒ‰ƒ[ƒ^iunicodej Boolean False ASCIIƒtƒ@ƒCƒ‹‚ğì¬‚·‚é‚È‚ç‚ÎFalse
-		Unicode(UTF-16)ƒtƒ@ƒCƒ‹‚ğì¬‚·‚é‚È‚ç‚ÎTrue‚ğw’è 
+	ç¬¬1ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ï¼ˆfilenameï¼‰ æ–‡å­—åˆ— ï¼ ä½œæˆã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®åå‰ã€‚çœç•¥ä¸å¯ 
+	ç¬¬2ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ï¼ˆoverwriteï¼‰ Boolean False ãƒ•ã‚¡ã‚¤ãƒ«ãŒå­˜åœ¨ã™ã‚‹å ´åˆã€
+		Trueãªã‚‰ã°ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸Šæ›¸ãã™ã‚‹ã€‚Falseãªã‚‰ã°ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã™ã‚‹ 
+	ç¬¬3ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ï¼ˆunicodeï¼‰ Boolean False ASCIIãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã™ã‚‹ãªã‚‰ã°False
+		Unicode(UTF-16)ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã™ã‚‹ãªã‚‰ã°Trueã‚’æŒ‡å®š 
 */
 		objOutFile = objFileSys.CreateTextFile(strFilePath, true);
 	} else {
@@ -444,7 +447,7 @@ function file_put_contents(strFilePath,strData){
 	objOutFile = null;
 }
 //////////////////////////////////////////////////////////////////
-// array ,jsonƒ‰ƒCƒuƒ‰ƒŠ
+// array ,jsonãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 function in_array (needle, haystack, argStrict) {
     // Checks if the given value exists in the array  
     // 
@@ -517,16 +520,16 @@ function fromJSON(strdata){
 
 /*
  http://billyboy.blog81.fc2.com/blog-entry-183.html
- ‰º‹LƒR[ƒh‚ğ<head> ` </head>ŠÔ‚É‹Lq‚·‚é‚©A
-ÀÛ‚Éæ“¾‚µ‚½‚¢êŠ‚É’¼Ú‘‚¢‚Ä‚à—Ç‚¢B
-‚±‚Ìƒ†[ƒU[’è‹`ŠÖ”ugetQuerystringv‚©‚çƒL[‚Ì’l‚ğæ“¾‚·‚éê‡‚ÍˆÈ‰º‚Ì‚æ‚¤‚É‹Lq‚·‚ê‚Î‚æ‚¢B
-	var key_value = getQuerystring('ƒƒP[ƒVƒ‡ƒ“','ƒL[–¼');
-—á‚¦‚ÎAƒpƒ‰ƒ[ƒ^["onlyUnpublished"‚Ì’l‚ªæ“¾‚µ‚½‚¯‚ê‚ÎA
+ ä¸‹è¨˜ã‚³ãƒ¼ãƒ‰ã‚’<head> ï½ </head>é–“ã«è¨˜è¿°ã™ã‚‹ã‹ã€
+å®Ÿéš›ã«å–å¾—ã—ãŸã„å ´æ‰€ã«ç›´æ¥æ›¸ã„ã¦ã‚‚è‰¯ã„ã€‚
+ã“ã®ãƒ¦ãƒ¼ã‚¶ãƒ¼å®šç¾©é–¢æ•°ã€ŒgetQuerystringã€ã‹ã‚‰ã‚­ãƒ¼ã®å€¤ã‚’å–å¾—ã™ã‚‹å ´åˆã¯ä»¥ä¸‹ã®ã‚ˆã†ã«è¨˜è¿°ã™ã‚Œã°ã‚ˆã„ã€‚
+	var key_value = getQuerystring('ãƒ­ã‚±ãƒ¼ã‚·ãƒ§ãƒ³','ã‚­ãƒ¼å');
+ä¾‹ãˆã°ã€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼"onlyUnpublished"ã®å€¤ãŒå–å¾—ã—ãŸã‘ã‚Œã°ã€
 	var key_value = getQuerystring('onlyUnpublished');
-‚É‚È‚éB
-ƒNƒGƒŠ[•¶š—ñ‚Éæ“¾‚µ‚½‚¢ƒpƒ‰ƒ[ƒ^[‚ªŠÜ‚Ü‚ê‚Ä‚¢‚È‚©‚Á‚½ê‡‚ÍA""(‹ó•¶š)‚ª•Ô‚³‚ê‚éB
-‘æ3ˆø”‚Éƒpƒ‰ƒ[ƒ^[‚ª‘¶İ‚µ‚È‚©‚Á‚½ê‡‚É•Ô‚µ‚½‚¢’l‚ğw’è‚µ‚Ä‚¨‚¯‚Î
-w’è‚µ‚½’l‚ª•Ô‚Á‚Ä‚­‚éB
+ã«ãªã‚‹ã€‚
+ã‚¯ã‚¨ãƒªãƒ¼æ–‡å­—åˆ—ã«å–å¾—ã—ãŸã„ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ãŒå«ã¾ã‚Œã¦ã„ãªã‹ã£ãŸå ´åˆã¯ã€""(ç©ºæ–‡å­—)ãŒè¿”ã•ã‚Œã‚‹ã€‚
+ç¬¬3å¼•æ•°ã«ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ãŒå­˜åœ¨ã—ãªã‹ã£ãŸå ´åˆã«è¿”ã—ãŸã„å€¤ã‚’æŒ‡å®šã—ã¦ãŠã‘ã°
+æŒ‡å®šã—ãŸå€¤ãŒè¿”ã£ã¦ãã‚‹ã€‚
 */
 /*
 function getQuerystring(loc, key, default_)
@@ -545,19 +548,19 @@ function getQuerystring(loc, key, default_)
 */
 
 /**
- * URL‰ğÍ‚µ‚ÄAƒNƒGƒŠ•¶š—ñ‚ğ•Ô‚·
- * @returns {Array} ƒNƒGƒŠ•¶š—ñ
+ * URLè§£æã—ã¦ã€ã‚¯ã‚¨ãƒªæ–‡å­—åˆ—ã‚’è¿”ã™
+ * @returns {Array} ã‚¯ã‚¨ãƒªæ–‡å­—åˆ—
  */
 function getUrlVars(){
 	var vars = [], max = 0, hash = "", array = "";
 	var url = window.location.search;
-		//?‚ğæ‚èœ‚­‚½‚ßA1‚©‚çn‚ß‚éB•¡”‚ÌƒNƒGƒŠ•¶š—ñ‚É‘Î‰‚·‚é‚½‚ßA&‚Å‹æØ‚é
+		//?ã‚’å–ã‚Šé™¤ããŸã‚ã€1ã‹ã‚‰å§‹ã‚ã‚‹ã€‚è¤‡æ•°ã®ã‚¯ã‚¨ãƒªæ–‡å­—åˆ—ã«å¯¾å¿œã™ã‚‹ãŸã‚ã€&ã§åŒºåˆ‡ã‚‹
 	hash  = url.slice(1).split('&');	
 	max = hash.length;
 	for (var i = 0; i < max; i++) {
-		array = hash[i].split('=');	//key‚Æ’l‚É•ªŠ„B
-		vars.push(array[0]);	//––”ö‚ÉƒNƒGƒŠ•¶š—ñ‚Ìkey‚ğ‘}“üB
-		vars[array[0]] = array[1];	//æ‚Ù‚ÇŠm•Û‚µ‚½key‚ÉA’l‚ğ‘ã“üB
+		array = hash[i].split('=');	//keyã¨å€¤ã«åˆ†å‰²ã€‚
+		vars.push(array[0]);	//æœ«å°¾ã«ã‚¯ã‚¨ãƒªæ–‡å­—åˆ—ã®keyã‚’æŒ¿å…¥ã€‚
+		vars[array[0]] = array[1];	//å…ˆã»ã©ç¢ºä¿ã—ãŸkeyã«ã€å€¤ã‚’ä»£å…¥ã€‚
 	}
 	return vars;
 }
@@ -565,17 +568,17 @@ function getUrlVars(){
 
 function GetQueryString() {
   if (1 < document.location.search.length) {
-	// Å‰‚Ì1•¶š (?‹L†) ‚ğœ‚¢‚½•¶š—ñ‚ğæ“¾‚·‚é
+	// æœ€åˆã®1æ–‡å­— (?è¨˜å·) ã‚’é™¤ã„ãŸæ–‡å­—åˆ—ã‚’å–å¾—ã™ã‚‹
 		var query = document.location.search.substring(1);
-		// ƒNƒGƒŠ‚Ì‹æØ‚è‹L† (&) ‚Å•¶š—ñ‚ğ”z—ñ‚É•ªŠ„‚·‚é
+		// ã‚¯ã‚¨ãƒªã®åŒºåˆ‡ã‚Šè¨˜å· (&) ã§æ–‡å­—åˆ—ã‚’é…åˆ—ã«åˆ†å‰²ã™ã‚‹
 		var parameters = query.split('&');
 		var result = new Object();
 		for (var i = 0; i < parameters.length; i++) {
-			// ƒpƒ‰ƒ[ƒ^–¼‚Æƒpƒ‰ƒ[ƒ^’l‚É•ªŠ„‚·‚é
+			// ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿åã¨ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿å€¤ã«åˆ†å‰²ã™ã‚‹
 			var element = parameters[i].split('=');
 			var paramName = decodeURIComponent(element[0]);
 			var paramValue = decodeURIComponent(element[1]);
-			// ƒpƒ‰ƒ[ƒ^–¼‚ğƒL[‚Æ‚µ‚Ä˜A‘z”z—ñ‚É’Ç‰Á‚·‚é
+			// ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿åã‚’ã‚­ãƒ¼ã¨ã—ã¦é€£æƒ³é…åˆ—ã«è¿½åŠ ã™ã‚‹
 			result[paramName] = decodeURIComponent(paramValue);
 		}
 		return result;
@@ -593,7 +596,7 @@ function location2filepath(href){
 	filepath = filepath.replace('http:\/\/hata2','F:');
 	filepath = filepath.replace(/\//g,'\\'); // /
 
-	//Œ©‚Â‚©‚ç‚È‚¢ê‡‚Í -1 ‚ğ•Ô‚µ‚Ü‚·
+	//è¦‹ã¤ã‹ã‚‰ãªã„å ´åˆã¯ -1 ã‚’è¿”ã—ã¾ã™
 //	alert(filepath.indexOf("srv_view.php"));
 	
 	if(filepath.indexOf("jsp_view.php") != -1){

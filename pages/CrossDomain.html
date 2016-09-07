@@ -59,7 +59,6 @@
              dataType: "text",
              success: function (res) {
                  var original = res.responseText;
-                 //alert(original);
                  //var stripped = original.replace(/(<([^>]+)>)/ig,"");
                  //alert(stripped);
                  //stripped = stripped.replace(/\&#xd;/,"\n");
@@ -74,6 +73,21 @@
          //SyntaxHighlighter.highlight();
      }
 
+	function loadjwplayer2(dest,site){
+	    $.ajax({
+	        url: '../pages/jwplayer.html',
+	        type: 'GET',
+	        async: false,
+	        dataType: "html",
+	        success: function (res) {
+	            //alert(site);
+	            //alert(res);
+	            tmp = res.replace(/file: hoge/, "file: \'" + site+ "\'");
+	            //alert(tmp);
+	            $(dest).html(tmp);
+	        }
+	    });
+    }
  
 
 </script>
@@ -89,8 +103,8 @@ ul.example2 { margin: 10px 50px; }
 <h3 style="text-align: center;">Cross Domain Page</h3>
 </header>
 <div id="contents">
-<nav id="navigator">
-</nav>
+<!--<nav id="navigator"></nav>-->
+<div id="navigator"></div>
 <div id="main">
 <article id="article">
 	<h1 id="qunit-header">jQuery-plus test suite</h1>
@@ -114,6 +128,10 @@ ul.example2 { margin: 10px 50px; }
 <div id="sidemenu"></div>
 <hr>
 <h1>Cross Domain</h1>
+<ul class="sidemenu">
+ <li><span><a href="../pages/jquery_ui.tab.html" target="_self">jquery_ui.tab</a></span></li>
+ <li><span><a href="../pages/CrossDomain.html" target="_self">CrossDomain</a></span></li>
+</ul>
 <h2>Page Menu</h2>
 <ul class="sidemenu">
 <li><span><a href="#" onClick="loadPage('#sitemenu1','../menus/SSlib.html');return false;">sslib menu</a></span></li>
@@ -138,8 +156,12 @@ ul.example2 { margin: 10px 50px; }
 
 <table id="disp2" border="0"><tr><td>
   <ul class="sidemenu">
+    <li><span><a href="#" onClick="loadPage('#container','../pages/jwplayer.html?aaaa');return false;">YouTube Seven</a></span></li>
+    <li><span><a href="#" onClick="loadjwplayer2('#container','http://www.youtube.com/v/dAwEas-b46o');return false;">羊は安らかに草を食み</a></span></li>
+<!--
 	<li><span><a href="#" onClick="loadJWPlayer('#container','https://www.youtube.com/watch?v=QD7hXT_a3fc');return false;">YouTube Seven</a></span></li>
-  </ul>
+ -->
+       </ul>
 </td></tr></table>
 
 </aside>
@@ -157,41 +179,5 @@ document.write("<font color='green'>　使用されている OS は " + window.n
   </div>
 </footer>
 <!--wrapper--></div>
-<script>
-    function loadJWPlayer(target, site) {
-         //$(target).text(site);
-         
-         var so = new SWFObject('../scripts/jwplayer/player.swf', 'mpl', '800', '600', '9');
-         so.addParam('allowfullscreen', 'true');
-         so.addParam('allowscriptaccess', 'always');
-         so.addParam('wmode', 'opaque');
-         so.addVariable("type", "lighttpd");
-         so.addVariable('file', site);
-         so.addVariable('controlbar', 'over');
-         so.write(target);
-         
-
-         /*
-         var playerInstance = jwplayer(target);
-         playerInstance.setup({
-         flashplayer: "../scripts/jwplayer/player.swf",
-         //file: "//www.youtube.com/watch?v=YE7VzlLtp-4",
-         file: "https://www.youtube.com/watch?v=QD7hXT_a3fc",
-         //file: site,
-         //file: "20071204202914890.flv",
-         //image: "tsure-shon.jpg",
-         //playlist: "//content.jwplatform.com/feeds/13ShtP5m.rss",
-         displaytitle: false,
-         controlbar: "bottom",
-         width: 800,
-         //width: 280,
-         height: 600
-         //height:24
-         });
-         //
-         //alert('koko');
-        */
-     }
-</script>
 </body>
 </html>

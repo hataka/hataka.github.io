@@ -1,12 +1,33 @@
 <meta http-equiv='Content-Type'content='text/htm; charset=UTF-8'>
-<ul>
+<script type="text/javascript" src="../scripts/clickmenu/jquery.clickmenu.js"></script>
+<link rel="stylesheet" type="text/css" href="../scripts/clickmenu/clickmenu.css" />
+<script type="text/javascript">
+  $(document).ready(function (){
+    $.fn.clickMenu.setDefaults({arrowSrc:'../scripts/clickmenu/arrow_right.gif'});
+    $('#mainmenu').clickMenu();
+  });
+</script>
+<style>
+  .clickMenu { LIST-STYLE-IMAGE: none;}
+  .clickMenu UL { LIST-STYLE-IMAGE: none;}
+</style>
+
+
+<ul id="mainmenu">
 <li><a href="/index.html" target="_self"><span style="color: #008800"><b>Home</b></span></a></li>
 <li style="color: #AAAAAA">|</li>
 <li><span><a href="https://github.com/hataka" target="_blank">Top</a></span></li>
 <li><span><a href="https://github.com/hataka/hataka.github.io" target="_blank">github.io</a></span></li>
 <li><span><a href="https://github.com/hataka/hataka.github.io/wiki" target="_blank">wiki</a></span></li>
 <li style="color: #AAAAAA">|</li>
-<li><span><a href="#" onClick="toggle_sidebar();return fakse;">SideBar表示</a></span></li>
+<li><span><a href="#" onClick="toggle_sidebar();return fakse;" id="toggle_sidebar">SideBar非表示</a></span></li>
+
+<li class="sep"></li>
+  <li>New...
+      <ul>
+        <li><span onClick="menuBar.file_new();return false;">New File</span></li>
+        <li><span onClick="menuBar.ClearCode();return false;">Clear Code</span></li>
+      </ul>
 
 <li>menu</li>
 <li>menu</li>
