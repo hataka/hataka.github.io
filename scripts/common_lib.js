@@ -91,6 +91,7 @@
     function load_audio(target,path){
         var html= "<center>" + embed_audio(path)+"</center>";
         $(target).html(html);
+
     }
  
 

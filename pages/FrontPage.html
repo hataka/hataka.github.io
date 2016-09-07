@@ -1,4 +1,12 @@
 <html>
+<head>
+  <script src="scripts/jquery-1.4.2.js"></script>
+  <script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+  <script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+  <link type="text/css" rel="stylesheet" href="scripts/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
 <section>
 <h2>Memo</h2>
 <hr>
@@ -49,18 +57,24 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 </ul>
 </section>
 <section>
-<h2>ToDo</h2>
+<h2>Embed Audio</h2>
 <hr>
-<center>
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-cute.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-acousticbreeze.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-betterdays.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-buddy.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-dubstep.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-epic.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-funnysong.mp3" controls />
-<audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-littleidea.mp3" controls />
-
+<table border="0" style="margin: 0 auto;vertical-align: middle;">
+ <tr><td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-cute.mp3" controls ></audio></td><td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-acousticbreeze.mp3" controls ></audio></td></tr>
+<tr>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-betterdays.mp3" controls ></audio></td>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-buddy.mp3" controls ></audio><br></td>
+</tr>
+<tr>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-dubstep.mp3" controls ></audio></td>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-epic.mp3" controls ></audio><br></td>
+</tr>
+<tr>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-funnysong.mp3" controls ></audio></td>
+<td><audio src="https://github.com/kolber/audiojs/raw/master/mp3/bensound-littleidea.mp3" controls ></audio><br></td>
+</tr>
+    <tr><td>MOZART-Piano_Concerto_No.14_in_E-flat,_K.449.mp3</td><td><audio src="http://kahata.travel.coocan.jp//Flash/EmbedFlashPlayer/MOZART-Piano_Concerto_No.14_in_E-flat,_K.449.mp3" controls ></audio></td></tr>
+</table>
 <!--
 <OBJECT CLASSID="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
 	CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,0,0"
@@ -78,4 +92,20 @@ ALLOW-FROM uri：フレーム内のページ表示を指定されたドメイン
 -->
 
 </center>
+<!-----
+<h2>Hello SyntaxHighlighter</h2>
+<hr>
+<pre class="brush: js;">
+function helloSyntaxHighlighter()
+{
+	return "hi!";
+}
+</pre>
+-->
+<h2>ToDo</h2>
+<hr>
+<ol>
+    <li>動的に読み込んだコードのSynTaxHighlight</li>
+</ol>
+</body>
 </html>

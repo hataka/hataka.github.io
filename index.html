@@ -6,74 +6,61 @@
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <link rel="stylesheet" href="layout.css" type="text/css">
   <script src="scripts/jquery-1.4.2.js"></script>
-	<script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-	<script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
-	<link type="text/css" rel="stylesheet" href="scripts/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
-	<script type="text/javascript">SyntaxHighlighter.all();</script>
+  <script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+  <script type="text/javascript" src="scripts/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+  <link type="text/css" rel="stylesheet" href="scripts/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+  <script src="./scripts/cross-domain-ajax/jquery.xdomainajax.js"></script>
   <script src="scripts/common_lib.js"></script>
-	<script src="./scripts/cross-domain-ajax/jquery.xdomainajax.js"></script>
  <script>
-	$(document).ready(function (){
-		$("#article").load("pages/FrontPage.html");
-		$("#navigator").load("https://hataka.github.io/menus/Navigator.html");
-		$("#sidemenu").load("https://hataka.github.io/menus/SideBar.html");
-
-		/*
-		//$('#tabC > ul').tabs();   // Slide effect
-		//OK 
-		$("#switch_target").toggle(
-			function(){
-				$("form").attr('target','_blank');
-				$("#target_name").html("_blank");
-			},
-			function(){
-				$("form").attr('target','MainPanel');
-				$("#target_name").html("MainPanel");
-			}
-		);
-		*/
-	});
+     $(document).ready(function () {
+         $("#article").load("pages/FrontPage.html");
+         $("#navigator").load("menus/Navigator.html");
+         $("#sidemenu").load("menus/SideBar.html");
+        SyntaxHighlighter.highlight();
+     });
 </script>
  </head>
 <body>
 <header>
 <h1>Hataka's GitHub Page</h1>
-<center><h3>Top Page</h3></center>
+<h3 style="text-align: center;">Top Page</h3>
 </header>
 <div id="contents">
-<nav id="navigator">
-</nav>
-<div id="main">
-<article id="article">
-</article>
+ <nav id="navigator"></nav>
+ <div id="main">
+ <article id="article">
+ </article>
 
-<h1>Hello SyntaxHighlighter</h1>
-<pre class="brush: js;">
-function helloSyntaxHighlighter()
-{
-	return "hi!";
-}
-</pre>
-<center>
-MOZART-Piano_Concerto_No.14_in_E-flat,_K.449.mp3
- <audio src="http://kahata.travel.coocan.jp//Flash/EmbedFlashPlayer/MOZART-Piano_Concerto_No.14_in_E-flat,_K.449.mp3" controls />
-
-<script type="text/javascript">
-document.write("使用されている OS は " + window.navigator.platform + " です。");
-</script>
-<!--    <embed src="http://www.youtube.com/v/DEgtj9zAf7s" width="300" height="200" /> -->
 
 
 <!--main--></div>
 
 <aside id="sidebar">
-
 <div id="sidemenu">
 </div>
+<h1>Front Menu</h1>
+<ul>
+<!--
+ <li><span><a href="#" onClick="loadPage('#article','BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+-->
+ <li><span><a href="#" onClick="load_swf('#article','../BubbleChartExample/BubbleChartExample.swf');return false;">BubbleChartExample.swf</a></span></li>
+</ul>
 </aside>
 <!--contents--></div>
 <footer>
-<div id="copyright">&copy;WEB DESIGN LAB</div>
+<span id="copyright">&copy;WEB DESIGN LAB
+<script type="text/javascript">
+document.write("<font color='green'>　使用されている OS は " + window.navigator.platform + " です。</font>");
+</script>
+</span>
+  <div style="text-align:right; margin-right:1em;float: right;">
+	<SCRIPT language="JavaScript">
+		document.write("Last update: ",document.lastModified)
+	</SCRIPT>
+  </div>
+
 </footer>
 <!--wrapper--></div>
+</body>
 </html>
