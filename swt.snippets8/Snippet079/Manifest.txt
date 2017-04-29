@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Snippet79
-Created-By: Snippet79 Time-stamp: <2016-02-03 16:30:07 kahata>

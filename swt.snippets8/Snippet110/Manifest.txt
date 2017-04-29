@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Snippet110
-Created-By: Snippet110 Time-stamp: <2016-02-03 16:30:07 kahata>
