@@ -31,12 +31,15 @@
 	
 	  function flashloader(path){
 	  	var swfpath = path.replace(/mxml/g,"swf");
+	  	
+	  	location.reload();
+	  	
 	  	load_swf('#tabC1',swfpath);
 			var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
 	  	$("#tabC2_cotent").html(site1);
 
-			$("#code1" ).text("");
-			$("#code1").removeClass("brush: xml;");
+			//$("#code1" ).text("");
+			..$("#code1").removeClass("brush: xml;");
 
 	  	$.ajax({
 			type:     "GET",
