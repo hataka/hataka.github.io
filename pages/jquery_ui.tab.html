@@ -44,8 +44,8 @@
 			success: function(data){
 				//alert(data.responseText);
 				$("#code1" ).text(data);
-				$("#code1").addClass("brush: xml;");
-					//SyntaxHighlighter.highlight();
+				//$("#code1").addClass("brush: xml;");
+				SyntaxHighlighter.highlight();
   				//SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
 			}
 		});
@@ -94,7 +94,7 @@
   TabC2
 	<div id="tabC2_cotent"></div>
 		<h1>Source Code</h1>
-		<pre id="code1" style="padding:0.5em;border:1px solid gray;font-weight:bold;"></pre>
+		<pre id="code1" class="brush: xml;" style="padding:0.5em;border:1px solid gray;font-weight:bold;"></pre>
 	</div> 
   <div id="tabC3">
   Tab3
