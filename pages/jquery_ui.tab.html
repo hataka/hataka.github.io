@@ -35,7 +35,10 @@
 	  	load_swf('#tabC1',swfpath);
 
 	  	var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
-	  	$("#tabC2_cotent").html(site1);
+	  	var hilightlink = '<a href="#" onClick="highlight();return false;">SyntaxHighlight</a>';
+ 	
+	  	//$("#tabC2_cotent").html(site1);
+	  	$("#tabC2_cotent").html(hilightlink);
 
 	  	$.ajax({
 			type:     "GET",
@@ -51,6 +54,11 @@
 			}
 		});
 	  }
+		
+		function highlight(){
+			$("#code1").addClass("brush: xml;");
+			SyntaxHighlighter.highlight();
+		}
 
 </script>
 </head>
