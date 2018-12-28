@@ -32,21 +32,12 @@
 	  function flashloader(path){
 	  	var swfpath = path.replace(/mxml/g,"swf");
 	  	load_swf('#tabC1',swfpath);
-	  	//load_swf('#tabC1',path +'.swf');
-		//https://hataka.github.io/                              BubbleChartExample/BubbleChartExample.mxml
-        //https://github.com/hataka/hataka.github.io/blob/master/
-	  	//var site1= '<a href="'+ 'https://github.com/hataka/hataka.github.io/blob/master/'+ path + '" target=_blank>'+ path + '.mxml</a>';
-		var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
+			var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
 	  	$("#tabC2_cotent").html(site1);
-		var viewer = 'http://kahata.travel.coocan.jp/FrameWork/Dirlister/SimpleViewer.class.php';
-		var baseurl ='https://raw.githubusercontent.com/hataka/hataka.github.io/master/';
-		//var baseurl ='https://hataka.github.io/'; //NG
-	  	var site2 = viewer + '?path=' + baseurl + path + '.mxml' + '&main=true';
-	  	//loadSite("#tabC2_cotent", site2);
-	  	//window.open("https://github.com/hataka/hataka.github.io/blob/master/BubbleChartExample/BubbleChartExample.mxml", "_blank");
-			//url:      "http://kahata.travel.coocan.jp/php1/sslib/sslib255.php", //NG
-			//url:      "https://hataka.github.io/BubbleChartExample/BubbleChartExample.mxml",
-			//url:      "https://raw.githubusercontent.com/hataka/hataka.github.io/master/BubbleChartExample/BubbleChartExample.mxml",
+
+			$("#code1" ).text("");
+			$("#code1").removeClass("brush: xml;");
+
 	  	$.ajax({
 			type:     "GET",
 			url:      path,
