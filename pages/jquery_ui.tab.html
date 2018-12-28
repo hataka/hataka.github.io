@@ -35,8 +35,10 @@
 	  	load_swf('#tabC1',swfpath);
 
 	  	var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
+	  	//var hilightlink = '<a href="#" onClick="highlight();return false;">SyntaxHighlight</a>'
+	  	//		+ '    <a href="#" onClick="plaintext();return false;">PlainText</a>';
 	  	var hilightlink = '<a href="#" onClick="highlight();return false;">SyntaxHighlight</a>'
-	  			+ '    <a href="#" onClick="plaintext();return false;">PlainText</a>';
+	  			+ '    <a href="#" onClick="reload();return false;">ReLoad</a>';
  	
 	  	//$("#tabC2_cotent").html(site1);
 	  	$("#tabC2_cotent").html(hilightlink);
@@ -61,9 +63,15 @@
 			SyntaxHighlighter.highlight();
 		}
 
+		//だめ働かない
 		function plaintext(){
 			$("#code1").removeClass("brush");
 			//SyntaxHighlighter.highlight();
+		}
+
+		function reload(){
+			// 現在表示されているページをリロードする
+			location.reload();
 		}
 
 </script>
@@ -149,6 +157,17 @@
 
  <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/BubbleChartExample/BubbleChartExample.mxml');return false;">BubbleChartExample</a></span></li>
  <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/CandlestickChartExample/CandlestickChartExample.mxml');return false;">CandlestickChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/Column_BarChartExample/Column_BarChartExample.mxml');return false;">Column_BarChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/DateTimeAxisExample/DateTimeAxisExample.mxml');return false;">DateTimeAxisExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/GridLinesExample/GridLinesExample.mxml');return false;">GridLinesExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/HLOCChartExample/HLOCChartExample.mxml');return false;">HLOCChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/Line_AreaChartExample/Line_AreaChartExample.mxml');return false;">Line_AreaChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/LogAxisExample/LogAxisExample.mxml');return false;">LogAxisExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/PieChartExample/PieChartExample.mxml');return false;">PieChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/PlotChartExample/PlotChartExample.mxml');return false;">PlotChartExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesInterpolateExample/SeriesInterpolateExample.mxml');return false;">SeriesInterpolateExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesSlideExample/SeriesSlideExample.mxml');return false;">SeriesSlideExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesZoomExample/SeriesZoomExample.mxml');return false;">SeriesZoomExample</a></span></li>
 </ol>
 </td></tr></table>
 
