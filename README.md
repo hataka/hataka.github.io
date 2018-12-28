@@ -9,3 +9,5 @@ HEAD にマージしHEADにマージしたブランチを削除する
 
 マージしたかどうかを問わずに削除する  
     % git branch -D foo
+* [README.mdファイル。マークダウン記法まとめ](https://codechord.com/2012/01/readme-markdown/)
+* [Apache Flex® Tour De Flex Component Explorer](http://flex.apache.org/tourdeflex/index.html)
