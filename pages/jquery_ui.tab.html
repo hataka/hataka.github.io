@@ -32,14 +32,10 @@
 	  function flashloader(path){
 	  	var swfpath = path.replace(/mxml/g,"swf");
 	  	
-	  	//location.reload();
-	  	
 	  	load_swf('#tabC1',swfpath);
-			var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
-	  	$("#tabC2_cotent").html(site1);
 
-			//$("#code1" ).text("");
-			//$("#code1").removeClass("brush: xml;");
+	  	var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
+	  	$("#tabC2_cotent").html(site1);
 
 	  	$.ajax({
 			type:     "GET",
@@ -49,7 +45,7 @@
 				//alert(data.responseText);
 				$("#code1" ).text(data);
 				$("#code1").addClass("brush: xml;");
-				SyntaxHighlighter.highlight();
+					//SyntaxHighlighter.highlight();
   				//SyntaxHighlighter.highlight(SyntaxHighlighter.defaults, this);
 			}
 		});
