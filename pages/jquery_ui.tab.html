@@ -31,7 +31,6 @@
 	
 	  function flashloader(path){
 	  	var swfpath = path.replace(/mxml/g,"swf");
-	  	var result = getHostnameFromString(path);
 	  	
 	  	load_swf('#tabC1',swfpath);
 
@@ -45,7 +44,8 @@
 	  	//$("#tabC2_cotent").html(site1);
 	  	$("#tabC2_cotent").html(hilightlink);
 
-	  	alert(result);
+	  	//alert(result);
+	  	$("#tabC3_cotent").html(maketabC3content(path));
 
 	  	$.ajax({
 			type:     "GET",
@@ -78,6 +78,20 @@
 			location.reload();
 		}
 
+		var maketabC3content = function(path) {
+	  	var host = getHostnameFromString(path);
+			var giturl = path.replace(/hataka.github.io/g,"github.com/hataka/hataka.github.io/blob/master");
+			var output = "<h1>Links</h1>"+"<h3>GitHub site</h3>"
+			+ '<ul><li><a href="'+ dirname(giturl) + '" target="_brank">' + filebody(giturl)
+			+ '</a></li></ul>'
+			+ '<h3>Other Web Links</h3>'
+			+ '<ul>'
+			+ '<li><a href="http://flex.apache.org/tourdeflex/index.html" target="_brank">Tour De Flex Component Explorer</a></li>'
+			+ '</ul>';
+			return output;
+		}
+		
+		
 		// URLの文字列からホスト名を取得
 		// http://shanabrian.com/web/javascript/get-hostname-from-string.php
 		//var url = 'http://www.example.co.jp/test/page/sample-01_test.html?data=test01&w1=d01#hash-sample';
