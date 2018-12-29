@@ -31,9 +31,11 @@
 	
 	  function flashloader(path){
 	  	var swfpath = path.replace(/mxml/g,"swf");
+	  	var result = getHostnameFromString(path);
 	  	
 	  	load_swf('#tabC1',swfpath);
 
+	  	
 	  	var site1= '<a href="'+ path + '" target=_blank>'+ path + '</a>';
 	  	//var hilightlink = '<a href="#" onClick="highlight();return false;">SyntaxHighlight</a>'
 	  	//		+ '    <a href="#" onClick="plaintext();return false;">PlainText</a>';
@@ -42,6 +44,8 @@
  	
 	  	//$("#tabC2_cotent").html(site1);
 	  	$("#tabC2_cotent").html(hilightlink);
+
+	  	alert(result);
 
 	  	$.ajax({
 			type:     "GET",
@@ -74,6 +78,18 @@
 			location.reload();
 		}
 
+		// URLの文字列からホスト名を取得
+		// http://shanabrian.com/web/javascript/get-hostname-from-string.php
+		//var url = 'http://www.example.co.jp/test/page/sample-01_test.html?data=test01&w1=d01#hash-sample';
+		//var result = getHostnameFromString(url); // www.example.co.jp
+		var getHostnameFromString = function(path) {
+			var result = path.replace(/\\/g, '/').match(/\/\/([^/]*)/);
+			if (!result) return '';
+			return result[1];
+		};
+		
+		//https://github.com/hataka/hataka.github.io/blob/master/ TourDeFlex3/mx/charts/BubbleChartExample/BubbleChartExample.mxml
+    //https://hataka.github.io/                               TourDeFlex3/mx/charts/BubbleChartExample/BubbleChartExample.mxml
 </script>
 </head>
 <body style="margin:0;">
@@ -168,6 +184,30 @@
  <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesInterpolateExample/SeriesInterpolateExample.mxml');return false;">SeriesInterpolateExample</a></span></li>
  <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesSlideExample/SeriesSlideExample.mxml');return false;">SeriesSlideExample</a></span></li>
  <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/charts/SeriesZoomExample/SeriesZoomExample.mxml');return false;">SeriesZoomExample</a></span></li>
+</ol>
+</td></tr></table>
+
+<h3 onClick="$(this).next().toggle()">containers</h3>
+<table  style="display:none;" border="0"><tr><td>
+<ol>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/AccordionExample/AccordionExample.mxml');return false;">AccordionExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/DividedBoxExample/DividedBoxExample.mxml');return false;">DividedBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/FormExample/FormExample.mxml');return false;">FormExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/GridLayoutExample/GridLayoutExample.mxml');return false;">GridLayoutExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/HBoxExample/HBoxExample.mxml');return false;">HBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/HDividedBoxExample/HDividedBoxExample.mxml');return false;">HDividedBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimpleApplicationControlBarExample/SimpleApplicationControlBarExample.mxml');return false;">SimpleApplicationControlBarExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimpleBoxExample/SimpleBoxExample.mxml');return false;">SimpleBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimpleCanvasExample/SimpleCanvasExample.mxml');return false;">SimpleCanvasExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimpleControlBarExample/SimpleControlBarExample.mxml');return false;">SimpleControlBarExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimplePanelExample/SimplePanelExample.mxml');return false;">SimplePanelExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/SimpleTitleWindowExample/SimpleTitleWindowExample.mxml');return false;">SimpleTitleWindowExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/TabNavigatorExample/TabNavigatorExample.mxml');return false;">TabNavigatorExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/TileLayoutExample/TileLayoutExample.mxml');return false;">TileLayoutExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/TitleWindowApp/TitleWindowApp.mxml');return false;">TitleWindowApp</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/VBoxExample/VBoxExample.mxml');return false;">VBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/VDividedBoxExample/VDividedBoxExample.mxml');return false;">VDividedBoxExample</a></span></li>
+ <li><span><a href="#" onClick="flashloader('https://hataka.github.io/TourDeFlex3/mx/containers/ViewStackExample/ViewStackExample.mxml');return false;">ViewStackExample</a></span></li>
 </ol>
 </td></tr></table>
 
